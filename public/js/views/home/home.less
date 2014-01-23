@@ -1,0 +1,207 @@
+@kgtFont: kgt, "Helvetica Neue", Arial, sans-serif;
+@vrindaFont: vrinda, "Helvetica Neue", Arial, sans-serif;
+@robotofont: roboto, "Helvetica Neue", Arial, sans-serif;
+
+//TODO make every distance as a relative percentage instead of using absolute values
+
+/*.main-bg {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 1800px;
+  position: absolute;
+  display: block;
+} */
+
+.skrollr-parent {
+  top:0%;
+  left:0%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: block;
+
+}
+
+.skrollr-child {
+
+}
+
+.home {
+  background-color: #4b849a;
+  width: 100%;
+  height:100%;
+  padding-top: 1px;   //hack so that the background has color where the margins are used
+}
+
+.mid-header {
+  background-color: yellow;
+  position: absolute;
+  top:100%;
+  left:0px;
+  width: 100%;
+  height: 100px;
+  padding-top: 5%;
+  box-shadow: 0px 10px 5px 0px #888888;
+
+}
+
+.portfolio {
+  background-color: #e9e8e6;
+  width: 100%;
+  height: 300px;
+}
+
+.contacts {
+  background-color: #4b849a;
+  width: 100%;
+  height: 300px
+}
+
+//TITLE
+.main-title {
+  font-family: @vrindaFont;
+  margin-left: 30%;
+  margin-top: 5%;
+  color: #b7b7b8;
+}
+
+.main-title .subtitle-block {
+
+  width: 150px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.main-title .subtitle-block .subtitle {
+  text-align: right;
+  font-size: 19px;
+  line-height: 1.1em;//22px;
+}
+
+.main-title .title {
+  font-size: 86px;
+  display: inline-block;
+}
+
+//Images
+.glass_perm {
+  background-image: url("img/glass_perm.png");
+  background-repeat: none;
+  width: 191px;
+  height: 439px;
+  position: absolute;
+  top: 300px;
+  left: 580px;
+}
+
+.paintbuck {
+  background-image: url("img/paintbuck2.png");
+  background-repeat: none;
+  width: 117px;
+  height: 140px;
+  position: absolute;
+  top: 555px;
+  left: 760px;
+}
+
+.brush1 {
+
+  background-image: url("img/brushes_sprite.png");
+  background-repeat: none;
+  //width: 126px;
+  //height: 375px;
+  background-position: 0px 0px;
+  width: 126px;
+  height: 270px;
+  position: absolute;
+  top: 220px;
+  left: 575px;
+}
+
+.brush2 {
+
+  background-image: url("img/brush2.png");
+  background-repeat: none;
+  width: 348px;
+  height: 159px;
+  position: absolute;
+  top: 220px;
+  left: 520px;
+  opacity: 1;
+}
+
+.brush3 {
+
+  background-image: url("img/brush3.png");
+  background-repeat: none;
+  width: 354px;
+  height: 86px;
+  position: absolute;
+  top: 225px;
+  left: 550px;
+  opacity: 1;
+}
+
+.brush4 {
+
+  background-image: url("img/brush4.png");
+  background-repeat: none;
+  width: 273px;
+  height: 252px;
+  position: absolute;
+  top: 210px;
+  left: 615px;
+  opacity: 1;
+}
+
+.brush5 {
+
+  background-image: url("img/brush5.png");
+  background-repeat: none;
+  width: 49px;
+  height: 341px;
+  position: absolute;
+  top: 240px;
+  left: 805px;
+  opacity: 1;
+}
+
+.home .names {
+  position: absolute;
+  top: 300px;
+  left: 890px;
+  color: #ffffff;
+  font-family: @kgtFont;
+}
+
+.home .names .first-name {
+  font-size: 101px;
+  line-height: 1.1em;
+  margin-bottom: -30px;
+}
+
+.home .names .last-name {
+  font-size: 112px;
+  line-height: 1.1em;
+
+}
+
+.names-subtitle {
+  position: absolute;
+  top: 555px;
+  left: 920px;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.mid-header .names {
+  text-align: center;
+  font-family: @kgtFont;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 1%;
+  color: #ed1c24;
+  font-size: 100px;
+  display: block;
+}

@@ -1,0 +1,26 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  height: 1000%;
+  width: 100%;
+}
+a {
+  color: #00B7FF;
+}
+@font-face {
+  font-family: kgt;
+  src: url(../fonts/KGTangledUpInYou2.ttf);
+}
+@font-face {
+  font-family: vrinda;
+  src: url('../fonts/vrinda.ttf');
+}
+@font-face {
+  font-family: roboto;
+  src: url('../fonts/Roboto-Thin_0.ttf');
+}
