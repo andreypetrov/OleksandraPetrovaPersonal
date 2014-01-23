@@ -28,21 +28,19 @@ define([
 
             this.skrollParentEl = this.$el.find('.skrollr-parent');
             /*$(window).scroll(function () {
-                var scrolledVal = $(document).scrollTop().valueOf();
-                if (scrolledVal >= 3000) {
-                    console.log(that.skrollParentEl);
-                    $(that.skrollParentEl).css({position: 'relative'});
-                }
-                else {
-                    $(that.skrollParentEl).css({position: 'fixed'});
-                }
+             var scrolledVal = $(document).scrollTop().valueOf();
+             if (scrolledVal >= 3000) {
+             console.log(that.skrollParentEl);
+             $(that.skrollParentEl).css({position: 'relative'});
+             }
+             else {
+             $(that.skrollParentEl).css({position: 'fixed'});
+             }
 
-                console.log(scrolledVal + ' = scroll value');
+             console.log(scrolledVal + ' = scroll value');
 
-            });*/
+             });*/
         },
-
-
 
 
         render: function () {

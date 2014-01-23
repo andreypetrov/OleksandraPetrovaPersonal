@@ -24,7 +24,7 @@ require.config({
         hbs: '../lib/hbs/hbs',
         i18nprecompile: '../lib/hbs/i18nprecompile',
         json2: '../lib/hbs/json2',
-        'skrollr':'../lib/skrollr.min'
+        'skrollr': '../lib/skrollr.min'
     },
 
     shim: {
