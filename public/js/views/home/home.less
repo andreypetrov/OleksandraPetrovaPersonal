@@ -22,9 +22,6 @@
   display: block;
 }
 
-.skrollr-child {
-
-}
 
 .home {
   background-color: #4b849a;
@@ -33,29 +30,7 @@
   padding-top: 1px; //hack so that the background has color where the margins are used
 }
 
-.mid-header {
-  background-color: yellow;
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  width: 100%;
-  height: 100px;
-  padding-top: 5%;
-  box-shadow: 0px 10px 5px 0px #888888;
 
-}
-
-.portfolio {
-  background-color: #e9e8e6;
-  width: 100%;
-  height: 300px;
-}
-
-.contacts {
-  background-color: #4b849a;
-  width: 100%;
-  height: 300px
-}
 
 //TITLE
 .main-title {
@@ -104,8 +79,7 @@
   left: 760px;
 }
 
-.brush1 {
-
+.brush1 { //brush to be animated in html
   background-image: url("img/brushes_sprite.png");
   background-repeat: none;
   //width: 126px;
@@ -116,54 +90,6 @@
   position: absolute;
   top: 220px;
   left: 575px;
-}
-
-.brush2 {
-
-  background-image: url("img/brush2.png");
-  background-repeat: none;
-  width: 348px;
-  height: 159px;
-  position: absolute;
-  top: 220px;
-  left: 520px;
-  opacity: 1;
-}
-
-.brush3 {
-
-  background-image: url("img/brush3.png");
-  background-repeat: none;
-  width: 354px;
-  height: 86px;
-  position: absolute;
-  top: 225px;
-  left: 550px;
-  opacity: 1;
-}
-
-.brush4 {
-
-  background-image: url("img/brush4.png");
-  background-repeat: none;
-  width: 273px;
-  height: 252px;
-  position: absolute;
-  top: 210px;
-  left: 615px;
-  opacity: 1;
-}
-
-.brush5 {
-
-  background-image: url("img/brush5.png");
-  background-repeat: none;
-  width: 49px;
-  height: 341px;
-  position: absolute;
-  top: 240px;
-  left: 805px;
-  opacity: 1;
 }
 
 .home .names {
@@ -194,13 +120,94 @@
   font-size: 30px;
 }
 
-.mid-header .names {
+
+
+
+//LOWER PART OF THE SCREEN
+
+
+.low {
+  top: 100%; //it will start after the page ends
+  position: absolute;
+  left: 0px;
+  height:100%;
+  width: 100%;
+}
+
+.low .mid-header {
+  background-color: yellow;
+  position: absolute;
+  //top: 100%; //it will start after the page ends
+  //left: 0px;
+  width: 100%;
+  height: 150px;
+  box-shadow: 0px 10px 5px 0px #888888;
+  z-index: 1002;
+}
+
+.low .mid-header .names {
+  margin-top:100px;
   text-align: center;
   font-family: @kgtFont;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1%;
   color: #ed1c24;
   font-size: 100px;
   display: block;
 }
+
+.low .low-scroll {
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+  position: relative;
+}
+
+.low .about {
+  background-color: #e9e8e6;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.low .about .design {
+  position: relative;
+  padding-top: 160px;  //margin equal to the .mid-header's height
+  margin-left:-60px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.low .about .my-love {
+  color:teal;
+  font-size:15px;
+  position: absolute;
+  width: 10%;
+  margin-left:55%;
+  margin-top:6%;
+  text-transform: uppercase;
+  display: block;
+}
+
+.low .about .palette {
+  background-image: url("img/palette.png");
+  position: absolute;
+  margin-left:30%;
+  margin-top:10%;
+  width: 551px;
+  height: 311px;
+}
+
+
+.low .portfolio {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.low .contacts {
+  background-color: #4b849a;
+  width: 100%;
+  height: 100%;
+}
+

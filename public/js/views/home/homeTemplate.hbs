@@ -2,23 +2,21 @@
 
 <!-- make the div stay on top by changing its top distance to be equal always to its scroll distance -->
 
-<div class="skrollr-parent"
-     data-smooth-scrolling="on"
+<!--<div class="skrollr-parent"
      data-0="position:!fixed; top:!0px;"
      data-2998="position:!fixed; top:!0px"
      data-2999="position:!absolute; top:!2999px"
-        >
+    >-->
 
-    <!--<div class="skrollr-parent" data-smooth-scrolling="off"
-         data-0="top:0px;"
-         data-250="top:250px;"
-         data-500="top:500px;"
-         data-750="top:750px;"
-         data-3000="top:3000px;">  -->
-    <!-- -->
 
-    <div class="home">
+<div class="skrollr-parent"
+     data-0="top:0%"
+     data-3000="top:0%"
+     data-3500="top:-100%"><!-- Switch to second page between 3000 and 3500-->
 
+    <div class="home"
+         data-3000="top: 0%"
+         data-3500="top: -100%;"> <!-- hide when it is not needed any more -->
 
         <div class="main-title">
             <div class="subtitle-block">
@@ -65,7 +63,8 @@
              data-2500="top: 125px; left: 780px;transform: rotate(185deg) scaleY(1)"
              data-2650="top: 98px; left: 637px; transform: rotate(82deg) scaleY(1);"
              data-2750="top: 115px; left: 533px; height: 375px; transform: rotate(0deg) scaleY(1)"
-             data-3000="top: 220px; left: 575px; height: 270px;"/>
+             data-3000="top: 220px; left: 575px; height: 270px;"
+                />
 
 
         <div class="names-subtitle">
@@ -73,17 +72,39 @@
             <div class="row">ideas, collaborations</div>
         </div>
     </div>
+    <!-- end of home tag -->
+
+    <div class="low">
+
+        <div class="mid-header">
+            <div class="names">Oleksandra Sydorenko</div>
+        </div>
+
+        <div class="low-scroll">
+            <div class="about" data-5000="margin-top:0%;" data-5500="margin-top:-33%;" data-6000="margin-top:-33%;" data-6500="margin-top:-66%;"> <!-- Start moving the portfolio
+             away to move to the third
+            page -->
+
+                <div class="design">Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
+                    Design
+                    Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
+                    Design Design Design Design Design Design Design
+                    Design Design Design Design Design Design Design Design Design
+                </div>
 
 
-    <div class="mid-header">
-        <div class="names">Oleksandra Sydorenko</div>
+                <div class="my-love">In my love for visual beauty I take any idea and present it using simple elements to carry a message bla balya</div>
+                <div class="palette"/>
+            </div>
+
+
+            <div class="portfolio"> <!-- Start moving the portfolio away to move to the third page -->
+
+            </div>
+
+            <div class="contacts">
+                contacts
+            </div>
+        </div>
     </div>
-    <div class="portfolio">
-
-    </div>
-
-    <div class="contacts">
-        contacts
-    </div>
-
 </div>
