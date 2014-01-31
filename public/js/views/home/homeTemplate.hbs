@@ -8,6 +8,15 @@
      data-2999="position:!absolute; top:!2999px"
     >-->
 
+<!-- TODO make all distances equal or make the duration function to move differently depending on the scroll position (see menu examples at github),
+because right now it is too fast in the beginning -->
+<div class="navigation" data-0="top:0%" data-6000="top:0%">
+    <a href="#home" data-menu-top="0">Home</a>
+    <a href="#about" data-menu-top="4500">About</a>
+    <a href="#portfolio" data-menu-top="5500">Portfolio</a>
+    <a href="#contacts" data-menu-top="6000">Contacts</a>
+
+</div>
 
 <div class="skrollr-parent"
      data-0="top:0%"
@@ -80,8 +89,9 @@
             <div class="names">Oleksandra Sydorenko</div>
         </div>
 
+        <!--<div class="low-scroll"  data-5000="margin-top:0%;" data-5500="margin-top:-33%;" data-6000="margin-top:-33%;" data-6500="margin-top:-66%;">-->
         <div class="low-scroll">
-            <div class="about" data-5000="margin-top:0%;" data-5500="margin-top:-33%;" data-6000="margin-top:-33%;" data-6500="margin-top:-66%;"> <!-- Start moving the portfolio
+            <div class="about" data-4500="top:0%;" data-5000="top:-100%;"> <!-- Start moving the portfolio
              away to move to the third
             page -->
 
@@ -98,11 +108,29 @@
             </div>
 
 
-            <div class="portfolio"> <!-- Start moving the portfolio away to move to the third page -->
+            <div class="portfolio" data-4500="top:100%;" data-5000="top:0%;" data-5500="top:0%;" data-6000="top:-100%;"> <!-- Start moving the portfolio away to move to the
+            third page -->
 
+                <div class="slider-wrapper theme-default">
+                    <div class="ribbon"></div>
+                    <div id="slider" class="nivoSlider">
+                        <img src="img/nemo.jpg" alt=""/>
+                        <a href="http://dev7studios.com"><img src="img/toystory.jpg" alt="" title="#htmlcaption"/></a>
+                        <img src="img/up.jpg" alt="" title="This is an example of a caption"/>
+                        <img src="img/walle.jpg" alt=""/>
+                    </div>
+                    <div id="htmlcaption" class="nivo-html-caption">
+                        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+                        Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
+                        Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
+                        Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
+                        Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
+                    </div>
+
+                </div>
             </div>
 
-            <div class="contacts">
+            <div class="contacts" data-5500="top:100%" data-6000="top:0%">
                 contacts
             </div>
         </div>

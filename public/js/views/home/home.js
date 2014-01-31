@@ -8,47 +8,70 @@
 define([
     'jquery',
     'views/archview',
-    'hbs!views/home/homeTemplate'
-], function ($, ArchView, template) {
+    'hbs!views/home/homeTemplate',
+    'nivoslider',
+    'skrollr',
+    'skrollrmenu'
+], function ($, ArchView, template, nivoslider) {
     return ArchView.extend({
         model: {adjective: "awesome"},
 
         template: template,
         skrollParentEl: 0,
+        sliderEl: 0,
 
         initialize: function () {
             ArchView.prototype.initialize.apply(this); //super call
-
-
         },
 
 
         initDomHandles: function () {
-            var that = this;
-
             this.skrollParentEl = this.$el.find('.skrollr-parent');
-            /*$(window).scroll(function () {
-             var scrolledVal = $(document).scrollTop().valueOf();
-             if (scrolledVal >= 3000) {
-             console.log(that.skrollParentEl);
-             $(that.skrollParentEl).css({position: 'relative'});
-             }
-             else {
-             $(that.skrollParentEl).css({position: 'fixed'});
-             }
+            this.sliderEl = this.$el.find('#slider');
 
-             console.log(scrolledVal + ' = scroll value');
 
-             });*/
         },
 
 
         render: function () {
             ArchView.prototype.render.apply(this);
+            //activate the slider
 
-
+            console.log(this.sliderEl);
             return this;
 
+        },
+
+
+        /**
+         *  Always call this function after you have added this.el to the dom of the page
+         */
+        postRender:function() {
+            this.initSkrollr();
+            this.initNivoSlider();
+        },
+
+
+        initSkrollr: function() {
+            var s = skrollr.init({
+                forceHeight: false,
+                smoothScrolling: true,
+                edgeStrategy: 'set'
+            });
+            skrollr.menu.init(s, {
+                duration: function(){
+                  return 1500;
+                },
+                easing: 'linear'
+            });
+        },
+
+        initNivoSlider: function() {
+
+            $(this.sliderEl).nivoSlider({
+                effect: 'slideInLeft'//,
+                // manualAdvance: true
+            });
         },
 
         events: {

@@ -11,26 +11,23 @@ define([
     'underscore',
     'backbone',
     'views/home/home',
-    'skrollr'
+    'skrollr',
+    'skrollrmenu'
 ], function ($, _, Backbone, HomeView) {
 
     var AppRouter = Backbone.Router.extend({
         routes: {
-            "": "home"
+            '*path': "home"
         },
 
         initialize: function () {
             this.homeView = new HomeView();
         },
 
-        home: function () {
-            $('#app').html(this.homeView.render().el);
+        home: function (navSection) {
+             $('#app').html(this.homeView.render().el);
+            this.homeView.postRender();
 
-            skrollr.init({
-                forceHeight: false,
-                smoothScrolling: true,
-                edgeStrategy: 'set'
-            });
             //skrollr.init({'forceHeight': true, 'scale':5});    //always init the scroller after all the elements in the dom have been added
         }
 
