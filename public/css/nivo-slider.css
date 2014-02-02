@@ -11,7 +11,7 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 50%;
+  width: 100%;
   height: auto;
   overflow: hidden;
 }
@@ -76,10 +76,13 @@
   filter: alpha(opacity=8);
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
+
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
+
   box-sizing: border-box;
   /* Opera/IE 8+ */
+
 }
 .nivo-caption p {
   padding: 5px;

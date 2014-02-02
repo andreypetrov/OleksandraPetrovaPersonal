@@ -1,87 +1,33 @@
 {{! {"styles" : ["js/views/home/home"]} }}
-
-<!-- make the div stay on top by changing its top distance to be equal always to its scroll distance -->
-
-<!--<div class="skrollr-parent"
-     data-0="position:!fixed; top:!0px;"
-     data-2998="position:!fixed; top:!0px"
-     data-2999="position:!absolute; top:!2999px"
-    >-->
-
 <!-- TODO make all distances equal or make the duration function to move differently depending on the scroll position (see menu examples at github),
 because right now it is too fast in the beginning -->
-<div class="navigation" data-0="top:0%" data-6000="top:0%">
-    <a href="#home" data-menu-top="0">Home</a>
-    <a href="#about" data-menu-top="4500">About</a>
-    <a href="#portfolio" data-menu-top="5500">Portfolio</a>
-    <a href="#contacts" data-menu-top="6000">Contacts</a>
+<div class="navigation"
+     data-0="top:0%"
+     data-6000="top:0%">
+    <a href="#hi" data-menu-top="0" class="nav-btn btn-hi"></a>
+    <a href="#about" data-menu-top="4500" class="nav-btn btn-about"></a>
+    <a href="#portfolio" data-menu-top="5500" class="nav-btn btn-portfolio"></a>
+    <a href="#contacts" data-menu-top="6000" class="nav-btn btn-contacts"></a>
 
+    <div class="scroll-hint" data-0="opacity:1;" data-3000="opacity:1;" data-3500="opacity:0;">
+        <div class="label">scroll</div>
+        <div class="btn-scroll nav-btn"/>
+    </div>
 </div>
+
 
 <div class="skrollr-parent"
      data-0="top:0%"
      data-3000="top:0%"
      data-3500="top:-100%"><!-- Switch to second page between 3000 and 3500-->
 
-    <div class="home"
+    <div class="hi"
          data-3000="top: 0%"
          data-3500="top: -100%;"> <!-- hide when it is not needed any more -->
-
-        <div class="main-title">
-            <div class="subtitle-block">
-                <div class="subtitle">Web</div>
-                <div class="subtitle">Mobile</div>
-                <div class="subtitle">Graphic</div>
-            </div>
-            <div class="title">Designer</div>
-        </div>
-
-
-        <!-- Synchronize animation of the letters with animation of the paintbrush -->
-        <div class="names">
-            <div class="first-name" data-1750="color:rgb(255,255,255);" data-2000="color:rgb(204, 34, 41);">Oleksandra</div>
-            <div class="last-name" data-2300="color:rgb(255,255,255);" data-2450="color:rgb(204, 34, 41);">Sydorenko</div>
-        </div>
-
-
-        <div class="glass_perm"/>
-
-
-        <div class="paintbuck"/>
-
-
-        <!--For safari add   -webkit-transform: translateZ(0); to the data-0-->
-        <div class="brush1" data-smooth-scrolling="on" data-0="top: 220px; left: 575px; height: 270px;"
-             data-250="top: 115px; left: 533px; height: 375px; transform: rotate(0deg) scaleY(1)"
-             data-500="top: 98px; left: 637px; transform: rotate(82deg) scaleY(1);"
-             data-750="top: 74px; left: 682px; transform: rotate(117deg) scaleY(1);"
-             data-1000="top: 147px; left: 706px; transform: rotate(146deg) scaleY(1);"
-             data-1209="top: 240px; left: 768px; transform: rotate(195deg) scaleY(1);background-position: !0px 0px;"
-             data-1210="background-position: !-127px 0px;"
-             data-1250="top: 249px; left: 768px; transform: rotate(195deg) scaleY(1);"
-             data-1349="top: 240px; left: 768px; transform: rotate(195deg) scaleY(1); background-position: !-127px 0px;"
-             data-1350="background-position: !-253px 0px;"
-             data-1500="top: 130px; left: 768px; transform: rotate(195deg) scaleY(1);"
-             data-1749="top: 40px; left: 880px; transform: rotate(210deg) scaleY(1); background-position: !-253px 0px;"
-             data-1750="background-position: !-379px 0px;"
-             data-2000="top: 40px; left: 1300px;"
-             data-2249="top: 125px; left: 1300px; transform: rotate(210deg) scaleY(1)"
-             data-2250="top: 125px; left: 1300px;transform: rotate(0deg) scaleY(-1)"
-             data-2300="top: 125px; left: 1300px;transform: rotate(-25deg) scaleY(-1)"
-             data-2499="top: 125px; left: 780px;transform: rotate(-25deg) scaleY(-1)"
-             data-2500="top: 125px; left: 780px;transform: rotate(185deg) scaleY(1)"
-             data-2650="top: 98px; left: 637px; transform: rotate(82deg) scaleY(1);"
-             data-2750="top: 115px; left: 533px; height: 375px; transform: rotate(0deg) scaleY(1)"
-             data-3000="top: 220px; left: 575px; height: 270px;"
-                />
-
-
-        <div class="names-subtitle">
-            <div class="row">available for new projects</div>
-            <div class="row">ideas, collaborations</div>
+        <div class="section-content">
+            {{> views_home_hiPartial }}
         </div>
     </div>
-    <!-- end of home tag -->
 
     <div class="low">
 
@@ -89,49 +35,33 @@ because right now it is too fast in the beginning -->
             <div class="names">Oleksandra Sydorenko</div>
         </div>
 
-        <!--<div class="low-scroll"  data-5000="margin-top:0%;" data-5500="margin-top:-33%;" data-6000="margin-top:-33%;" data-6500="margin-top:-66%;">-->
         <div class="low-scroll">
-            <div class="about" data-4500="top:0%;" data-5000="top:-100%;"> <!-- Start moving the portfolio
-             away to move to the third
-            page -->
-
-                <div class="design">Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
-                    Design
-                    Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
-                    Design Design Design Design Design Design Design
-                    Design Design Design Design Design Design Design Design Design
+            <div class="about"
+                 data-4500="top:0%;"
+                 data-5000="top:-100%;">
+                <div class="section-content">
+                    {{> views_home_aboutPartial }}
                 </div>
-
-
-                <div class="my-love">In my love for visual beauty I take any idea and present it using simple elements to carry a message bla balya</div>
-                <div class="palette"/>
             </div>
 
 
-            <div class="portfolio" data-4500="top:100%;" data-5000="top:0%;" data-5500="top:0%;" data-6000="top:-100%;"> <!-- Start moving the portfolio away to move to the
+            <div class="portfolio"
+                 data-4500="top:100%;"
+                 data-5000="top:0%;"
+                 data-5500="top:0%;"
+                 data-6000="top:-100%;"> <!-- Start moving the portfolio away to move to the
             third page -->
-
-                <div class="slider-wrapper theme-default">
-                    <div class="ribbon"></div>
-                    <div id="slider" class="nivoSlider">
-                        <img src="img/nemo.jpg" alt=""/>
-                        <a href="http://dev7studios.com"><img src="img/toystory.jpg" alt="" title="#htmlcaption"/></a>
-                        <img src="img/up.jpg" alt="" title="This is an example of a caption"/>
-                        <img src="img/walle.jpg" alt=""/>
-                    </div>
-                    <div id="htmlcaption" class="nivo-html-caption">
-                        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
-                        Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
-                        Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
-                        Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
-                        Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design Design
-                    </div>
-
+                <div class="section-content">
+                    {{> views_home_portfolioPartial }}
                 </div>
             </div>
 
-            <div class="contacts" data-5500="top:100%" data-6000="top:0%">
-                contacts
+            <div class="contacts"
+                 data-5500="top:100%"
+                 data-6000="top:0%">
+                <div class="section-content">
+                    {{> views_home_contactsPartial }}
+                </div>
             </div>
         </div>
     </div>

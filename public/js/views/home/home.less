@@ -2,6 +2,13 @@
 @vrindaFont: vrinda, "Helvetica Neue", Arial, sans-serif;
 @robotofont: roboto, "Helvetica Neue", Arial, sans-serif;
 
+@colorLightGray: #e9e8e6;
+@colorGray: #b7b7b8;
+@colorBlue: #4b849a;
+@colorYellow: #fffcf2;
+@colorRed: #ed1c24;
+@colorWhite: #ffffff;
+
 //TODO make every distance as a relative percentage instead of using absolute values
 
 /*.main-bg {
@@ -13,16 +20,59 @@
   display: block;
 } */
 
+.section-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  position:relative;
+}
+
 .navigation {
-  top: 0%;
-  left: 0%;
+  margin-top: 18%;
+  left: 10%;
   width: 10%;
   height: 10%;
   position: fixed;
   display: block;
-  background-color: green;
-  z-index:1200;
+  z-index: 1200;
+  color: @colorGray;
 }
+
+.navigation .nav-btn {
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.navigation .btn-hi {
+  background-image: url('img/icn_home50x50.png');
+}
+
+.navigation .btn-about {
+  background-image: url('img/icn_home50x50.png');
+}
+
+.navigation .btn-portfolio {
+  background-image: url('img/icn_portfolio50x50.png');
+}
+
+.navigation .btn-contacts {
+  background-image: url('img/icn_contacts50x50.png');
+}
+
+.navigation .scroll-hint .label {
+  margin-top: 100px;
+  background-color: transparent;
+  margin-left: -17px;
+  font-size: 40px;
+  display: block;
+}
+
+.navigation .scroll-hint .btn-scroll {
+  background-image: url('img/icn_down50x50.png');
+}
+
 .skrollr-parent {
   top: 0%;
   left: 0%;
@@ -32,136 +82,155 @@
   display: block;
 }
 
-
-.home {
-  background-color: #4b849a;
+.hi {
+  background-color: @colorBlue;
   width: 100%;
   height: 100%;
   padding-top: 1px; //hack so that the background has color where the margins are used
 }
 
-
-
 //TITLE
-.main-title {
+.hi .main-title {
   font-family: @vrindaFont;
-  margin-left: 30%;
+  margin-left: 10%;
   margin-top: 5%;
-  color: #b7b7b8;
+  color: @colorGray;
 }
 
-.main-title .subtitle-block {
+.hi .main-title .subtitle-block {
 
   width: 150px;
   display: inline-block;
   margin-right: 5px;
 }
 
-.main-title .subtitle-block .subtitle {
+.hi .main-title .subtitle-block .subtitle {
   text-align: right;
   font-size: 19px;
   line-height: 1.1em;//22px;
 }
 
-.main-title .title {
+.hi .main-title .title {
   font-size: 86px;
   display: inline-block;
 }
 
 //Images
-.glass_perm {
+.hi .glass_perm {
   background-image: url("img/glass_perm.png");
   background-repeat: none;
   width: 191px;
   height: 439px;
   position: absolute;
   top: 300px;
-  left: 580px;
+  left: 100px;
 }
 
-.paintbuck {
+.hi .paintbuck {
   background-image: url("img/paintbuck2.png");
   background-repeat: none;
   width: 117px;
   height: 140px;
   position: absolute;
   top: 555px;
-  left: 760px;
+  left: 280px;
 }
 
-.brush1 { //brush to be animated in html
+.hi .brush { //brush to be animated in html
   background-image: url("img/brushes_sprite.png");
   background-repeat: none;
   //width: 126px;
   //height: 375px;
   background-position: 0px 0px;
-  width: 126px;
+  width: 70px;
   height: 270px;
   position: absolute;
   top: 220px;
-  left: 575px;
+  left: 30px;
+  z-index: 3000;
+  //-webkit-transform-style: preserve-3d;
+  //-webkit-backface-visibility: hidden;
+  //-webkit-tap-highlight-color: rgba(0,0,0,0);
+  //-webkit-backface-visibility: hidden;
 }
 
-.home .names {
+.hi .names {
   position: absolute;
   top: 300px;
-  left: 890px;
-  color: #ffffff;
+  left: 410px;
+  color: @colorWhite;
   font-family: @kgtFont;
 }
 
-.home .names .first-name {
+.hi .names .first-name {
+  //-webkit-backface-visibility: hidden;
+  //-webkit-backface-visibility: hidden;
+  //-moz-backface-visibility:    hidden;
+  //-ms-backface-visibility:     hidden;
+
+  // -webkit-transform-style: preserve-3d;
+ // -webkit-backface-visibility: hidden;
+  //-webkit-transform: translateZ(0);
   font-size: 101px;
   line-height: 1.1em;
   margin-bottom: -30px;
+
 }
 
-.home .names .last-name {
+.hi .names .last-name {
+ // -webkit-backface-visibility: hidden;
+  //-webkit-backface-visibility: hidden;
+  //-moz-backface-visibility:    hidden;
+  //-ms-backface-visibility:     hidden;
+
+  // -webkit-transform-style: preserve-3d;
+ // -webkit-backface-visibility: hidden;
+ // -webkit-transform: translateZ(0);
   font-size: 112px;
   line-height: 1.1em;
+  z-index: 1;
 
 }
 
-.names-subtitle {
+.hi .names-subtitle {
   position: absolute;
   top: 555px;
-  left: 920px;
-  color: #ffffff;
+  left: 440px;
+  color: @colorWhite;
   font-size: 30px;
 }
 
-
-
-
 //LOWER PART OF THE SCREEN
-
 
 .low {
   top: 100%; //it will start after the page ends
   position: absolute;
   left: 0px;
-  height:100%;
+  height: 100%;
   width: 100%;
 }
 
 .low .mid-header {
-  background-color: yellow;
+  background-color: @colorLightGray;
   position: absolute;
   //top: 100%; //it will start after the page ends
   //left: 0px;
   width: 100%;
   height: 150px;
-  box-shadow: 0px 10px 5px 0px #888888;
+  box-shadow: 0px 1px 15px 0px #888888;
   z-index: 1002;
 }
 
 .low .mid-header .names {
-  margin-top:100px;
+  -webkit-backface-visibility: hidden;
+  margin-top: 60px;
+
+  line-height: 1.1em;
   text-align: center;
   font-family: @kgtFont;
   margin-left: auto;
   margin-right: auto;
-  color: #ed1c24;
+  color: @colorRed;
   font-size: 100px;
   display: block;
 }
@@ -174,7 +243,7 @@
 }
 
 .low .about {
-  background-color: #e9e8e6;
+  background-color: @colorYellow;
   width: 100%;
   height: 100%;
   position: relative;
@@ -182,19 +251,20 @@
 
 .low .about .design {
   position: relative;
-  padding-top: 160px;  //margin equal to the .mid-header's height
-  margin-left:-60px;
+  padding-top: 160px; //margin equal to the .mid-header's height
+  margin-left: -60px;
   white-space: nowrap;
   overflow: hidden;
+  text-color: #9f9f9f;
 }
 
 .low .about .my-love {
-  color:teal;
-  font-size:15px;
+  color: teal;
+  font-size: 15px;
   position: absolute;
-  width: 10%;
-  margin-left:55%;
-  margin-top:6%;
+  right:0px;
+  width: 20%; //of parent who is 50% of whole
+  margin-top: 6%;
   text-transform: uppercase;
   display: block;
 
@@ -202,28 +272,45 @@
 
 .low .about .palette {
   background-image: url("img/palette.png");
-  position: absolute;
-  margin-left:30%;
-  margin-top:10%;
+  position: relative;
+  margin-top: 10%;
   width: 551px;
   height: 311px;
 }
 
-
 .low .portfolio {
   position: absolute;
-  padding-top:15%;
+  padding-top: 15%;
   background-color: black;
   width: 100%;
   height: 100%;
-  top:100%;
-}
-.low .contacts {
-  position: absolute;
-  padding-top:15%;
-  background-color: #4b849a;
-  width: 100%;
-  height: 100%;
-  top:100%;
+  top: 100%;
 }
 
+.low .contacts {
+  position: absolute;
+  padding-top: 15%;
+  background-color: #9f9f9f;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+}
+
+.low .contacts .contact-paragraph {
+}
+
+.low .contacts .title {
+  font-family: @kgtFont;
+  color: @colorRed;
+  text-align: left;
+  font-size: 50px;
+  line-height: 1.1em;
+}
+
+.low .contacts a {
+  margin-top: 10px;
+  color: @colorRed;
+  text-decoration: none;
+  font-family: @kgtFont;
+  display: block;
+}
