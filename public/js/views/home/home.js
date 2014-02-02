@@ -59,8 +59,13 @@ define([
                 edgeStrategy: 'set'
             });
             skrollr.menu.init(s, {
-                duration: function(){
-                  return 1500;
+                duration: function(currentTop, targetTop){//the duration of the animation as a function of the distance
+
+                  var distance = Math.abs(targetTop - currentTop);
+                  var speed = 2; // 2000 pixels per second
+
+                  var time = distance / speed; // t = S/v, where
+                  return time;
                 },
                 easing: 'linear'
             });

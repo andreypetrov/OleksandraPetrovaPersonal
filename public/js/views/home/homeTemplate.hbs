@@ -1,18 +1,8 @@
 {{! {"styles" : ["js/views/home/home"]} }}
 <!-- TODO make all distances equal or make the duration function to move differently depending on the scroll position (see menu examples at github),
 because right now it is too fast in the beginning -->
-<div class="navigation"
-     data-0="top:0%"
-     data-6000="top:0%">
-    <a href="#hi" data-menu-top="0" class="nav-btn btn-hi"></a>
-    <a href="#about" data-menu-top="4500" class="nav-btn btn-about"></a>
-    <a href="#portfolio" data-menu-top="5500" class="nav-btn btn-portfolio"></a>
-    <a href="#contacts" data-menu-top="6000" class="nav-btn btn-contacts"></a>
-
-    <div class="scroll-hint" data-0="opacity:1;" data-3000="opacity:1;" data-3500="opacity:0;">
-        <div class="label">scroll</div>
-        <div class="btn-scroll nav-btn"/>
-    </div>
+<div class="navigation">
+    {{> views_home_navigationPartial }}
 </div>
 
 
@@ -36,6 +26,7 @@ because right now it is too fast in the beginning -->
         </div>
 
         <div class="low-scroll">
+            <!-- appears at 3500, use in nav -->
             <div class="about"
                  data-4500="top:0%;"
                  data-5000="top:-100%;">
@@ -44,21 +35,22 @@ because right now it is too fast in the beginning -->
                 </div>
             </div>
 
-
+            <!-- appears at 5000, use in nav -->
             <div class="portfolio"
                  data-4500="top:100%;"
                  data-5000="top:0%;"
-                 data-5500="top:0%;"
-                 data-6000="top:-100%;"> <!-- Start moving the portfolio away to move to the
+                 data-6000="top:0%;"
+                 data-6500="top:-100%;"> <!-- Start moving the portfolio away to move to the
             third page -->
                 <div class="section-content">
                     {{> views_home_portfolioPartial }}
                 </div>
             </div>
 
+            <!-- appears at 6500, use in nav -->
             <div class="contacts"
-                 data-5500="top:100%"
-                 data-6000="top:0%">
+                 data-6000="top:100%"
+                 data-6500="top:0%">
                 <div class="section-content">
                     {{> views_home_contactsPartial }}
                 </div>

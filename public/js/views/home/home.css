@@ -13,7 +13,7 @@
   position: relative;
 }
 .navigation {
-  margin-top: 18%;
+  margin-top: 17%;
   left: 10%;
   width: 10%;
   height: 10%;
@@ -22,23 +22,14 @@
   z-index: 1200;
   color: #b7b7b8;
 }
-.navigation .nav-btn {
+.nav-btn {
   margin-bottom: 10px;
   width: 50px;
   height: 50px;
   display: block;
-}
-.navigation .btn-hi {
-  background-image: url('img/icn_home50x50.png');
-}
-.navigation .btn-about {
-  background-image: url('img/icn_home50x50.png');
-}
-.navigation .btn-portfolio {
-  background-image: url('img/icn_portfolio50x50.png');
-}
-.navigation .btn-contacts {
-  background-image: url('img/icn_contacts50x50.png');
+  font-size: 50px;
+  text-decoration: none;
+  color: #b7b7b8;
 }
 .navigation .scroll-hint .label {
   margin-top: 100px;
@@ -105,7 +96,6 @@
 .hi .brush {
   background-image: url("img/brushes_sprite.png");
   background-repeat: none;
-  background-position: 0px 0px;
   width: 70px;
   height: 270px;
   position: absolute;
@@ -209,10 +199,15 @@
   height: 100%;
   top: 100%;
 }
+.low .portfolio .nivoSlider img {
+  background-image: url("img/portfolio/slide1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .low .contacts {
   position: absolute;
   padding-top: 15%;
-  background-color: #9f9f9f;
+  background-color: #fffcf2;
   width: 100%;
   height: 100%;
   top: 100%;

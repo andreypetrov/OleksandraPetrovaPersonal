@@ -38,6 +38,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-about:before {
+  content: "a";
+}
+.icon-down:before {
+  content: "a";
+}
+.icon-files:before {
+  content: "d";
+}
+.icon-hi:before {
+  content: "p";
+}
 .icon-mail-icon:before {
-  content: "e";
+  content: "h";
+}
+.icon-about:before {
+  content: "a";
+}
+.icon-down:before {
+  content: "b";
+}
+.icon-files:before {
+  content: "c";
+}
+.icon-hi:before {
+  content: "d";
+}
+.icon-about:before {
+  content: "a";
+}
+.icon-down:before {
+  content: "b";
+}
+.icon-files:before {
+  content: "c";
+}
+.icon-hi:before {
+  content: "d";
+}
+.icon-left:before {
+  content: "l";
+}
+.icon-mail:before {
+  content: "m";
+}
+.icon-right:before {
+  content: "r";
 }
