@@ -1,16 +1,3 @@
-@kgtFont: kgt, "Helvetica Neue", Arial, sans-serif;
-@vrindaFont: vrinda, "Helvetica Neue", Arial, sans-serif;
-@robotofont: roboto, "Helvetica Neue", Arial, sans-serif;
-
-@colorLightGray: #e9e8e6;
-@colorGray: #b7b7b8;
-@colorBlue: #4b849a;
-@colorYellow: #fffcf2;
-@colorRed: #ed1c24;
-@colorWhite: #ffffff;
-
-//TODO make every distance as a relative percentage instead of using absolute values
-
 /*.main-bg {
   margin-left: auto;
   margin-right: auto;
@@ -19,14 +6,12 @@
   position: absolute;
   display: block;
 } */
-
 .section-content {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  position:relative;
+  position: relative;
 }
-
 .navigation {
   margin-top: 10%;
   left: 10%;
@@ -35,43 +20,27 @@
   position: fixed;
   display: block;
   z-index: 1200;
-  color: @colorGray;
+  color: #b7b7b8;
 }
-
 .nav-btn {
-  margin-bottom: 20px;
-  width: 70px;
-  height: 70px;
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
   display: block;
-  font-size: 4em; //50px;
+  font-size: 3em;
   text-decoration: none;
- // color:@colorGray;
+  color: #b7b7b8;
 }
-
-.nav-btn:hover,
-.nav-btn:focus,
-.nav-btn:active {
-  margin-top: -10px;
-  width:80px;
-  height:80px;
-  margin-left: -10px;
-  font-size:5em;
-
-}
-
 .navigation .scroll-hint .label {
   margin-top: 100px;
   background-color: transparent;
-  margin-left: -10px;
-  font-size:  2.3em; //40px;
+  margin-left: -17px;
+  font-size: 2.3em;
   display: block;
 }
-
-
 .navigation .scroll-hint .btn-scroll {
   background-image: url('img/icn_down50x50.png');
 }
-
 .skrollr-parent {
   top: 0%;
   left: 0%;
@@ -80,186 +49,153 @@
   position: fixed;
   display: block;
 }
-
 .hi {
-  background-color: @colorBlue;
+  background-color: #4b849a;
   width: 100%;
   height: 100%;
-  position: relative;
-  padding-top: 1px; //hack so that the background has color where the margins are used
+  padding-top: 1px;
 }
-
-//TITLE
 .hi .main-title {
-  font-family: @vrindaFont;
+  font-family: vrinda, "Helvetica Neue", Arial, sans-serif;
   margin-left: 10%;
   margin-top: 5%;
-  color: @colorGray;
+  color: #b7b7b8;
 }
-
 .hi .main-title .subtitle-block {
-
   width: 150px;
   display: inline-block;
   margin-right: 5px;
 }
-
 .hi .main-title .subtitle-block .subtitle {
   text-align: right;
-  font-size: 1.2em; //19px;
-  line-height: 1.1em;//22px;
+  font-size: 1.2em;
+  line-height: 1.1em;
 }
-
 .hi .main-title .title {
-  font-size: 5.4em;  // 86px;
+  font-size: 5.4em;
   display: inline-block;
 }
-
-//Images
 .hi .glass_perm {
   background-image: url("img/glass_perm.png");
   background-repeat: none;
   width: 191px;
   height: 439px;
   position: absolute;
-  top: 250px;
-  left: 60px;
-  /*@media(max-height: 800px) { //add specific to the resolution config
-    top: 120px;
-  } */
+  top: 300px;
+  left: 100px;
 }
-
+@media (max-height: 800px) {
+  .hi .glass_perm {
+    top: 120px;
+  }
+}
 .hi .paintbuck {
   background-image: url("img/paintbuck2.png");
   background-repeat: none;
   width: 117px;
   height: 140px;
   position: absolute;
-  top: 505px;
-  left: 240px;
+  top: 555px;
+  left: 280px;
 }
-
-.hi .brush { //brush to be animated in html
+.hi .brush {
   background-image: url("img/brushes_sprite.png");
   background-repeat: none;
   width: 70px;
   height: 270px;
   position: absolute;
-  top: 170px;
-  left: 90px;
+  top: 220px;
+  left: 30px;
   z-index: 3000;
 }
-
 .hi .names {
   position: absolute;
-  top: 250px;
+  top: 300px;
   left: 410px;
-  color: @colorWhite;
-  font-family: @kgtFont;
+  color: #ffffff;
+  font-family: kgt, "Helvetica Neue", Arial, sans-serif;
 }
-
 .hi .names .first-name {
-  font-size: 6.3em; // 101px;
+  font-size: 6.3em;
   line-height: 1.1em;
   margin-bottom: -30px;
-
 }
-
 .hi .names .last-name {
-  font-size: 7em; //112px;
+  font-size: 7em;
   line-height: 1.1em;
   z-index: 1;
-
 }
-
 .hi .names-subtitle {
   position: absolute;
-  top: 505px;
+  top: 555px;
   left: 440px;
-  color: @colorLightGray;
-  font-size: 1.8em; //30px;
+  color: #ffffff;
+  font-size: 1.8em;
 }
-
-//LOWER PART OF THE SCREEN
-
 .low {
-  top: 100%; //it will start after the page ends
+  top: 100%;
   position: absolute;
   left: 0px;
   height: 100%;
   width: 100%;
 }
-
 .low .mid-header {
-  background-color: @colorLightGray;
+  background-color: #e9e8e6;
   position: absolute;
-  //top: 100%; //it will start after the page ends
-  //left: 0px;
   width: 100%;
   height: 15%;
   box-shadow: 0px 1px 15px 0px #888888;
   z-index: 1002;
 }
-
 .low .mid-header .names {
   -webkit-backface-visibility: hidden;
   margin-top: 2%;
-
   line-height: 1.1em;
   text-align: center;
-  font-family: @kgtFont;
+  font-family: kgt, "Helvetica Neue", Arial, sans-serif;
   margin-left: auto;
   margin-right: auto;
-  color: @colorRed;
-  font-size: 7em;
+  color: #ed1c24;
+  font-size: 5em;
   display: block;
-  left: 250px;
 }
-
 .low .low-scroll {
   width: 100%;
   height: 100%;
   z-index: 900;
   position: relative;
 }
-
 .low .about {
-  background-color: @colorYellow;
+  background-color: #fffcf2;
   width: 100%;
   height: 100%;
   position: relative;
 }
-
 .low .about .design {
   position: relative;
-  padding-top: 160px; //margin equal to the .mid-header's height
+  padding-top: 160px;
   margin-left: -60px;
   white-space: nowrap;
   overflow: hidden;
   text-color: #9f9f9f;
 }
-
 .low .about .my-love {
   color: teal;
-  font-size: 1em; //15px;
+  font-size: 1em;
   position: absolute;
-  right:0px;
-  width: 20%; //of parent who is 50% of whole
+  right: 0px;
+  width: 20%;
   margin-top: 6%;
   text-transform: uppercase;
   display: block;
-
 }
-
 .low .about .palette {
   background-image: url("img/palette.png");
   position: relative;
   margin-top: 10%;
   width: 551px;
   height: 311px;
-
 }
-
 .low .portfolio {
   position: absolute;
   padding-top: 15%;
@@ -268,8 +204,7 @@
   height: 100%;
   top: 100%;
 }
-
-.low .portfolio .nivoSlider img{
+.low .portfolio .nivoSlider img {
   background-image: url("img/portfolio/slide1.jpg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -277,29 +212,23 @@
 .low .contacts {
   position: absolute;
   padding-top: 15%;
-  background-color: @colorYellow;
+  background-color: #fffcf2;
   width: 100%;
   height: 100%;
   top: 100%;
 }
-
-.low .contacts .contact-paragraph {
-}
-
 .low .contacts .title {
-  font-family: @kgtFont;
-  color: @colorRed;
+  font-family: kgt, "Helvetica Neue", Arial, sans-serif;
+  color: #ed1c24;
   text-align: left;
-  font-size: 3em;//50px;
+  font-size: 3em;
   line-height: 1.1em;
 }
-
 .low .contacts a {
   margin-top: 10px;
-  color: @colorRed;
+  color: #ed1c24;
   text-decoration: none;
-  font-family: @kgtFont;
+  font-family: kgt, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-size: 1.5em;
 }
-

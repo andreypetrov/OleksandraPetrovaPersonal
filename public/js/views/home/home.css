@@ -13,7 +13,7 @@
   position: relative;
 }
 .navigation {
-  margin-top: 17%;
+  margin-top: 10%;
   left: 10%;
   width: 10%;
   height: 10%;
@@ -23,19 +23,27 @@
   color: #b7b7b8;
 }
 .nav-btn {
-  margin-bottom: 10px;
-  width: 50px;
-  height: 50px;
+  margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
   display: block;
-  font-size: 50px;
+  font-size: 4em;
   text-decoration: none;
-  color: #b7b7b8;
+}
+.nav-btn:hover,
+.nav-btn:focus,
+.nav-btn:active {
+  margin-top: -10px;
+  width: 80px;
+  height: 80px;
+  margin-left: -10px;
+  font-size: 5em;
 }
 .navigation .scroll-hint .label {
   margin-top: 100px;
   background-color: transparent;
-  margin-left: -17px;
-  font-size: 40px;
+  margin-left: -10px;
+  font-size: 2.3em;
   display: block;
 }
 .navigation .scroll-hint .btn-scroll {
@@ -53,6 +61,7 @@
   background-color: #4b849a;
   width: 100%;
   height: 100%;
+  position: relative;
   padding-top: 1px;
 }
 .hi .main-title {
@@ -68,11 +77,11 @@
 }
 .hi .main-title .subtitle-block .subtitle {
   text-align: right;
-  font-size: 19px;
+  font-size: 1.2em;
   line-height: 1.1em;
 }
 .hi .main-title .title {
-  font-size: 86px;
+  font-size: 5.4em;
   display: inline-block;
 }
 .hi .glass_perm {
@@ -81,8 +90,12 @@
   width: 191px;
   height: 439px;
   position: absolute;
-  top: 300px;
-  left: 100px;
+  top: 250px;
+  left: 60px;
+  /*@media(max-height: 800px) { //add specific to the resolution config
+    top: 120px;
+  } */
+
 }
 .hi .paintbuck {
   background-image: url("img/paintbuck2.png");
@@ -90,8 +103,8 @@
   width: 117px;
   height: 140px;
   position: absolute;
-  top: 555px;
-  left: 280px;
+  top: 505px;
+  left: 240px;
 }
 .hi .brush {
   background-image: url("img/brushes_sprite.png");
@@ -99,33 +112,33 @@
   width: 70px;
   height: 270px;
   position: absolute;
-  top: 220px;
-  left: 30px;
+  top: 170px;
+  left: 90px;
   z-index: 3000;
 }
 .hi .names {
   position: absolute;
-  top: 300px;
+  top: 250px;
   left: 410px;
   color: #ffffff;
   font-family: kgt, "Helvetica Neue", Arial, sans-serif;
 }
 .hi .names .first-name {
-  font-size: 101px;
+  font-size: 6.3em;
   line-height: 1.1em;
   margin-bottom: -30px;
 }
 .hi .names .last-name {
-  font-size: 112px;
+  font-size: 7em;
   line-height: 1.1em;
   z-index: 1;
 }
 .hi .names-subtitle {
   position: absolute;
-  top: 555px;
+  top: 505px;
   left: 440px;
-  color: #ffffff;
-  font-size: 30px;
+  color: #e9e8e6;
+  font-size: 1.8em;
 }
 .low {
   top: 100%;
@@ -138,21 +151,22 @@
   background-color: #e9e8e6;
   position: absolute;
   width: 100%;
-  height: 150px;
+  height: 15%;
   box-shadow: 0px 1px 15px 0px #888888;
   z-index: 1002;
 }
 .low .mid-header .names {
   -webkit-backface-visibility: hidden;
-  margin-top: 60px;
+  margin-top: 2%;
   line-height: 1.1em;
   text-align: center;
   font-family: kgt, "Helvetica Neue", Arial, sans-serif;
   margin-left: auto;
   margin-right: auto;
   color: #ed1c24;
-  font-size: 100px;
+  font-size: 7em;
   display: block;
+  left: 250px;
 }
 .low .low-scroll {
   width: 100%;
@@ -176,7 +190,7 @@
 }
 .low .about .my-love {
   color: teal;
-  font-size: 15px;
+  font-size: 1em;
   position: absolute;
   right: 0px;
   width: 20%;
@@ -216,7 +230,7 @@
   font-family: kgt, "Helvetica Neue", Arial, sans-serif;
   color: #ed1c24;
   text-align: left;
-  font-size: 50px;
+  font-size: 3em;
   line-height: 1.1em;
 }
 .low .contacts a {
@@ -225,4 +239,5 @@
   text-decoration: none;
   font-family: kgt, "Helvetica Neue", Arial, sans-serif;
   display: block;
+  font-size: 1.5em;
 }
