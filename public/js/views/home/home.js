@@ -116,6 +116,8 @@ define([
             this.toggleVisibilityOfTarget(this.aboutNavEl, this.aboutLabelEl);
             this.toggleVisibilityOfTarget(this.portfolioNavEl, this.portfolioLabelEl);
             this.toggleVisibilityOfTarget(this.contactsNavEl, this.contactsLabelEl);
+
+
         },
 
 
