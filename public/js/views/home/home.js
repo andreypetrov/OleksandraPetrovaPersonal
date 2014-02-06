@@ -111,30 +111,11 @@ define([
 
 
         initNavBar: function () {
-            //this.activeNavEl = this.hiNavEl;
-            //this.hiNavEl.addClass("nav-btn-active");
-            //this.hiLabelEl.css('visibility', 'visible');
-
             var that = this;
-            console.log("initnavbar");
             this.toggleVisibilityOfTarget(this.hiNavEl, this.hiLabelEl);
             this.toggleVisibilityOfTarget(this.aboutNavEl, this.aboutLabelEl);
             this.toggleVisibilityOfTarget(this.portfolioNavEl, this.portfolioLabelEl);
             this.toggleVisibilityOfTarget(this.contactsNavEl, this.contactsLabelEl);
-
-            /*this.hiNavEl.click(function () {
-             that.onNavClick(that.hiNavEl, that.hiLabelEl);
-             });
-             this.aboutNavEl.click(function () {
-             that.onNavClick(that.aboutNavEl, that.aboutLabelEl);
-             });
-             this.portfolioNavEl.click(function () {
-             that.onNavClick(that.portfolioNavEl, that.portfolioLabelEl);
-             });
-             this.contactsNavEl.click(function () {
-             that.onNavClick(that.contactsNavEl, that.contactsLabelEl);
-             });
-             */
         },
 
 
@@ -182,29 +163,8 @@ define([
             if (scrollTop < 4500) return this.aboutNavEl;
             if (scrollTop < 5500) return this.portfolioNavEl;
             else return this.contactsNavEl;
-        },
-
-
-        /**
-         * disactivate all buttons and then activate the currently clicked one
-         * @param target
-         */
-        onNavClick: function (targetButton, targetLabel) {
-            this.hiNavEl.removeClass("nav-btn-active");
-            this.aboutNavEl.removeClass("nav-btn-active");
-            this.portfolioNavEl.removeClass("nav-btn-active");
-            this.contactsNavEl.removeClass("nav-btn-active");
-
-            this.hiLabelEl.css('visibility', 'hidden');
-            this.aboutLabelEl.css('visibility', 'hidden');
-            this.portfolioLabelEl.css('visibility', 'hidden');
-            this.contactsLabelEl.css('visibility', 'hidden');
-
-            targetButton.addClass("nav-btn-active");
-            targetLabel.css('visibility', 'visible');
-            this.activeNavEl = targetButton;
-
         }
+
     })
         ;
 })
