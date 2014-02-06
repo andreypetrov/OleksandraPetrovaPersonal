@@ -38,6 +38,7 @@ Supports Thumbs: true
 	border:0;
 	margin: 0 2px;
       */
+
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -66,13 +67,13 @@ Supports Thumbs: true
   opacity: 1;
 }
 .theme-default a.nivo-nextNav {
-  background-image: url('icn_right50x50.png');
+  background-image: url('right.png');
   width: 50px;
   height: 50px;
   right: 15px;
 }
 .theme-default a.nivo-prevNav {
-  background-image: url('icn_left50x50.png');
+  background-image: url('left.png');
   width: 50px;
   height: 50px;
   left: 15px;

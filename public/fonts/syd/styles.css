@@ -38,30 +38,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-about:before {
+.icon-cargo:before {
   content: "a";
 }
-.icon-cargo:before {
-  content: "c";
-}
 .icon-down:before {
-  content: "d";
+  content: "b";
 }
 .icon-files:before {
-  content: "p";
+  content: "c";
 }
 .icon-hi:before {
-  content: "h";
+  content: "d";
 }
 .icon-left:before {
-  content: "l";
+  content: "e";
 }
 .icon-linkedin:before {
-  content: "i";
+  content: "f";
 }
 .icon-mail:before {
-  content: "m";
+  content: "g";
+}
+.icon-palette:before {
+  content: "h";
 }
 .icon-right:before {
-  content: "r";
+  content: "i";
 }

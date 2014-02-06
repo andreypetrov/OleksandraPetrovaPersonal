@@ -8,6 +8,7 @@
 @colorYellow: #fffcf2;
 @colorRed: #ed1c24;
 @colorWhite: #ffffff;
+@colorLightest: #f0f0f0;
 
 //TODO make every distance as a relative percentage instead of using absolute values
 
@@ -21,56 +22,110 @@
 } */
 
 .section-content {
-  margin-left: auto;
+  margin-left: 25%;
   margin-right: auto;
-  width: 50%;
-  position:relative;
+  width: 60%;
+  position: relative;
 }
 
 .navigation {
-  margin-top: 10%;
+  top: 0%;
   left: 10%;
-  width: 10%;
+  width: 100px;
   height: 10%;
   position: fixed;
   display: block;
   z-index: 1200;
   color: @colorGray;
+  font-family: @vrindaFont;
+  text-align: center;
+}
+
+.navigation .label {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.navigation .scroll-label {
+  margin-top:50px;
+  visibility: visible;
 }
 
 .nav-btn {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  font-size: 4em; //50px;
+  text-decoration: none;
+}
+
+.nav-btn-active {
+  margin-top: -10px;
+  width: 80px;
+  height: 80px;
+  font-size: 5em;
+}
+
+.label-active {
+  visibility: visible;
+}
+
+
+.navigation .nav-btn:hover,
+.navigation .nav-btn:focus,
+.navigation .nav-btn:active {
+  margin-top: -10px;
+  width: 80px;
+  height: 80px;
+  font-size: 5em;
+
+}
+
+.navigation .nav-btn-scroller {
+    .nav-btn;
+}
+/*.nav-btn .info {
+  margin-top: 10%;
+  background-color: transparent;
+  margin-left: -10px;
+  font-size: 1em; //40px;
+  display: block;
+}  */
+
+info:hover, info:active, input:hover+info, input:active+info {
+  background: yellow;
+}
+
+.navigation .scroll-hint .label {
+  margin-top: 10%;
+  background-color: transparent;
+  margin-left: -10px;
+  font-size: 2.3em; //40px;
+  display: block;
+}
+
+.navigation .scroll-hint .btn-scroll {
   margin-bottom: 20px;
   width: 70px;
   height: 70px;
   display: block;
   font-size: 4em; //50px;
   text-decoration: none;
- // color:@colorGray;
 }
 
-.nav-btn:hover,
-.nav-btn:focus,
-.nav-btn:active {
-  margin-top: -10px;
-  width:80px;
-  height:80px;
-  margin-left: -10px;
-  font-size:5em;
-
-}
-
-.navigation .scroll-hint .label {
-  margin-top: 100px;
-  background-color: transparent;
-  margin-left: -10px;
-  font-size:  2.3em; //40px;
+/*.navigation .scroll-hint .btn-scroll:hover,
+.navigation .scroll-hint .btn-scroll:active,
+.navigation .scroll-hint .btn-scroll:focus {
+  margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
   display: block;
-}
-
-
-.navigation .scroll-hint .btn-scroll {
-  background-image: url('img/icn_down50x50.png');
-}
+  font-size: 4em; //50px;
+  text-decoration: none;
+} */
 
 .skrollr-parent {
   top: 0%;
@@ -92,7 +147,7 @@
 //TITLE
 .hi .main-title {
   font-family: @vrindaFont;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-top: 5%;
   color: @colorGray;
 }
@@ -111,7 +166,7 @@
 }
 
 .hi .main-title .title {
-  font-size: 5.4em;  // 86px;
+  font-size: 5.4em; // 86px;
   display: inline-block;
 }
 
@@ -191,14 +246,15 @@
 }
 
 .low .mid-header {
-  background-color: @colorLightGray;
+  background-color: @colorLightest;
   position: absolute;
   //top: 100%; //it will start after the page ends
   //left: 0px;
   width: 100%;
-  height: 15%;
+  height: 150px;
   box-shadow: 0px 1px 15px 0px #888888;
   z-index: 1002;
+  //@media(min-height: 100px);
 }
 
 .low .mid-header .names {
@@ -211,8 +267,8 @@
   margin-left: auto;
   margin-right: auto;
   color: @colorRed;
-  font-size: 7em;
-  display: block;
+  font-size: 110px;//7em;
+
   left: 250px;
 }
 
@@ -224,7 +280,9 @@
 }
 
 .low .about {
-  background-color: @colorYellow;
+  //background-color: @colorLightest;
+  background-image: url("img/bg.png");
+  background-repeat: repeat;
   width: 100%;
   height: 100%;
   position: relative;
@@ -233,17 +291,17 @@
 .low .about .design {
   position: relative;
   padding-top: 160px; //margin equal to the .mid-header's height
-  margin-left: -60px;
+  margin-left: -52%;
   white-space: nowrap;
   overflow: hidden;
-  text-color: #9f9f9f;
+  color: @colorGray;
 }
 
 .low .about .my-love {
   color: teal;
   font-size: 1em; //15px;
   position: absolute;
-  right:0px;
+  right: 0px;
   width: 20%; //of parent who is 50% of whole
   margin-top: 6%;
   text-transform: uppercase;
@@ -252,7 +310,7 @@
 }
 
 .low .about .palette {
-  background-image: url("img/palette.png");
+  background-image: url("img/pallete1.png");
   position: relative;
   margin-top: 10%;
   width: 551px;
@@ -262,19 +320,34 @@
 
 .low .portfolio {
   position: absolute;
-  padding-top: 15%;
+  padding-top: 10%;
   background-color: black;
   width: 100%;
   height: 100%;
   top: 100%;
 }
 
-.low .portfolio .nivoSlider img{
+.low .portfolio .title {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: @kgtFont;
+  text-transform: uppercase;
+  line-height: 1.1em;
+  font-size: 6em;
+}
+
+.low .portfolio .nivoSlider img {
   background-image: url("img/portfolio/slide1.jpg");
   background-repeat: no-repeat;
   background-size: contain;
 }
+
 .low .contacts {
+  background-image: url("img/bg.png");
+  background-repeat: repeat;
   position: absolute;
   padding-top: 15%;
   background-color: @colorYellow;

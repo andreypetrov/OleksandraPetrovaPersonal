@@ -1,7 +1,7 @@
 {{! {"styles" : ["js/views/home/home"]} }}
 <!-- TODO make all distances equal or make the duration function to move differently depending on the scroll position (see menu examples at github),
 because right now it is too fast in the beginning -->
-<div class="navigation" data-0="margin-top:10%;" data-3000="margin-top:10%;" data-3500="margin-top:15%;">
+<div class="navigation" data-0="margin-top:8%;" data-3000="margin-top:8%;" data-3500="margin-top:15%;">
     {{> views_home_navigationPartial }}
 </div>
 
@@ -12,8 +12,8 @@ because right now it is too fast in the beginning -->
      data-3500="top:-100%"><!-- Switch to second page between 3000 and 3500-->
 
     <div class="hi"
-         data-3000="top: 0%"
-         data-3500="top: -100%;"> <!-- hide when it is not needed any more -->
+         data-3500="top: 0%"
+         data-4000="top: -100%;"> <!-- hide when it is not needed any more. If you edit the skrollr-parent, but not the hi element, they may get out of sync  -->
         <div class="section-content">
             {{> views_home_hiPartial }}
         </div>

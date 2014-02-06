@@ -1,4 +1,7 @@
 @import url(style.css);
+
 @import url(nivo-slider.css);
+
 @import url(nivo-theme/default.css);
-@import url("../fonts/syd-font/styles.css");
+
+@import url("../fonts/syd/styles.css");

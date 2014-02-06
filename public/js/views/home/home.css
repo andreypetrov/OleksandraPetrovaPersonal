@@ -7,22 +7,89 @@
   display: block;
 } */
 .section-content {
-  margin-left: auto;
+  margin-left: 25%;
   margin-right: auto;
-  width: 50%;
+  width: 60%;
   position: relative;
 }
 .navigation {
-  margin-top: 10%;
+  top: 0%;
   left: 10%;
-  width: 10%;
+  width: 100px;
   height: 10%;
   position: fixed;
   display: block;
   z-index: 1200;
   color: #b7b7b8;
+  font-family: vrinda, "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+}
+.navigation .label {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.navigation .scroll-label {
+  margin-top: 50px;
+  visibility: visible;
 }
 .nav-btn {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  font-size: 4em;
+  text-decoration: none;
+}
+.nav-btn-active {
+  margin-top: -10px;
+  width: 80px;
+  height: 80px;
+  font-size: 5em;
+}
+.label-active {
+  visibility: visible;
+}
+.navigation .nav-btn:hover,
+.navigation .nav-btn:focus,
+.navigation .nav-btn:active {
+  margin-top: -10px;
+  width: 80px;
+  height: 80px;
+  font-size: 5em;
+}
+.navigation .nav-btn-scroller {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  font-size: 4em;
+  text-decoration: none;
+}
+/*.nav-btn .info {
+  margin-top: 10%;
+  background-color: transparent;
+  margin-left: -10px;
+  font-size: 1em; //40px;
+  display: block;
+}  */
+info:hover,
+info:active,
+input:hover + info,
+input:active + info {
+  background: yellow;
+}
+.navigation .scroll-hint .label {
+  margin-top: 10%;
+  background-color: transparent;
+  margin-left: -10px;
+  font-size: 2.3em;
+  display: block;
+}
+.navigation .scroll-hint .btn-scroll {
   margin-bottom: 20px;
   width: 70px;
   height: 70px;
@@ -30,25 +97,16 @@
   font-size: 4em;
   text-decoration: none;
 }
-.nav-btn:hover,
-.nav-btn:focus,
-.nav-btn:active {
-  margin-top: -10px;
-  width: 80px;
-  height: 80px;
-  margin-left: -10px;
-  font-size: 5em;
-}
-.navigation .scroll-hint .label {
-  margin-top: 100px;
-  background-color: transparent;
-  margin-left: -10px;
-  font-size: 2.3em;
+/*.navigation .scroll-hint .btn-scroll:hover,
+.navigation .scroll-hint .btn-scroll:active,
+.navigation .scroll-hint .btn-scroll:focus {
+  margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
   display: block;
-}
-.navigation .scroll-hint .btn-scroll {
-  background-image: url('img/icn_down50x50.png');
-}
+  font-size: 4em; //50px;
+  text-decoration: none;
+} */
 .skrollr-parent {
   top: 0%;
   left: 0%;
@@ -66,7 +124,7 @@
 }
 .hi .main-title {
   font-family: vrinda, "Helvetica Neue", Arial, sans-serif;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-top: 5%;
   color: #b7b7b8;
 }
@@ -95,7 +153,6 @@
   /*@media(max-height: 800px) { //add specific to the resolution config
     top: 120px;
   } */
-
 }
 .hi .paintbuck {
   background-image: url("img/paintbuck2.png");
@@ -148,10 +205,10 @@
   width: 100%;
 }
 .low .mid-header {
-  background-color: #e9e8e6;
+  background-color: #f0f0f0;
   position: absolute;
   width: 100%;
-  height: 15%;
+  height: 150px;
   box-shadow: 0px 1px 15px 0px #888888;
   z-index: 1002;
 }
@@ -164,8 +221,7 @@
   margin-left: auto;
   margin-right: auto;
   color: #ed1c24;
-  font-size: 7em;
-  display: block;
+  font-size: 110px;
   left: 250px;
 }
 .low .low-scroll {
@@ -175,7 +231,8 @@
   position: relative;
 }
 .low .about {
-  background-color: #fffcf2;
+  background-image: url("img/bg.png");
+  background-repeat: repeat;
   width: 100%;
   height: 100%;
   position: relative;
@@ -183,10 +240,10 @@
 .low .about .design {
   position: relative;
   padding-top: 160px;
-  margin-left: -60px;
+  margin-left: -52%;
   white-space: nowrap;
   overflow: hidden;
-  text-color: #9f9f9f;
+  color: #b7b7b8;
 }
 .low .about .my-love {
   color: teal;
@@ -199,7 +256,7 @@
   display: block;
 }
 .low .about .palette {
-  background-image: url("img/palette.png");
+  background-image: url("img/pallete1.png");
   position: relative;
   margin-top: 10%;
   width: 551px;
@@ -207,11 +264,22 @@
 }
 .low .portfolio {
   position: absolute;
-  padding-top: 15%;
+  padding-top: 10%;
   background-color: black;
   width: 100%;
   height: 100%;
   top: 100%;
+}
+.low .portfolio .title {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: kgt, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1.1em;
+  font-size: 6em;
 }
 .low .portfolio .nivoSlider img {
   background-image: url("img/portfolio/slide1.jpg");
@@ -219,6 +287,8 @@
   background-size: contain;
 }
 .low .contacts {
+  background-image: url("img/bg.png");
+  background-repeat: repeat;
   position: absolute;
   padding-top: 15%;
   background-color: #fffcf2;
