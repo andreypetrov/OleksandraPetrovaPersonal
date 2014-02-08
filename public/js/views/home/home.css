@@ -7,10 +7,15 @@
   display: block;
 } */
 .section-content {
-  margin-left: 25%;
+  margin-left: 22%;
   margin-right: auto;
   width: 60%;
   position: relative;
+}
+@media (max-width: 1800px) {
+  .section-content {
+    width: 70%;
+  }
 }
 .navigation {
   top: 0%;
@@ -25,7 +30,7 @@
   text-align: center;
 }
 .navigation .label {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 25px;
 }
 .navigation .scroll-label {
@@ -153,6 +158,7 @@ input:active + info {
   /*@media(max-height: 800px) { //add specific to the resolution config
     top: 120px;
   } */
+
 }
 .hi .paintbuck {
   background-image: url("img/paintbuck2.png");
@@ -240,25 +246,35 @@ input:active + info {
 .low .about .design {
   position: relative;
   padding-top: 160px;
-  margin-left: -52%;
+  margin-left: -50%;
+  margin-right: -50%;
   white-space: nowrap;
   overflow: hidden;
   color: #b7b7b8;
 }
-.low .about .my-love {
-  color: teal;
-  font-size: 1em;
+.low .about .creativity {
+  color: #4b849a;
+  font-size: 2.5em;
+  margin-top: 10%;
+  right: 5%;
   position: absolute;
-  right: 0px;
-  width: 20%;
-  margin-top: 6%;
-  text-transform: uppercase;
+  font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
+}
+.low .about .my-love {
+  color: #4b849a;
+  font-size: 1.5em;
+  position: absolute;
+  right: 5%;
+  width: 30%;
+  margin-top: 20%;
+  font-weight: 100;
   display: block;
+  text-align: right;
 }
 .low .about .palette {
-  background-image: url("img/pallete1.png");
-  position: relative;
-  margin-top: 10%;
+  background-image: url("img/palette.png");
+  position: absolute;
+  margin-top: 15%;
   width: 551px;
   height: 311px;
 }
@@ -276,10 +292,11 @@ input:active + info {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: kgt, "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 20px;
+  font-family: roboto, "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1.1em;
-  font-size: 6em;
+  font-size: 1em;
 }
 .low .portfolio .nivoSlider img {
   background-image: url("img/portfolio/slide1.jpg");

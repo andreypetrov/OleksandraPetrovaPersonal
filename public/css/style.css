@@ -22,6 +22,10 @@ a {
   src: url('../fonts/vrinda.ttf');
 }
 @font-face {
+  font-family: ohyeah;
+  src: url('../fonts/ohyeah_0.ttf');
+}
+@font-face {
   font-family: roboto;
   src: url('../fonts/Roboto-Thin_0.ttf');
 }

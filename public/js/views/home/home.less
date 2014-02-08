@@ -1,6 +1,7 @@
 @kgtFont: kgt, "Helvetica Neue", Arial, sans-serif;
 @vrindaFont: vrinda, "Helvetica Neue", Arial, sans-serif;
 @robotofont: roboto, "Helvetica Neue", Arial, sans-serif;
+@ohyeahfont: ohyeah, "Helvetica Neue", Arial, sans-serif;
 
 @colorLightGray: #e9e8e6;
 @colorGray: #b7b7b8;
@@ -22,10 +23,14 @@
 } */
 
 .section-content {
-  margin-left: 25%;
+  margin-left: 22%;
   margin-right: auto;
   width: 60%;
   position: relative;
+
+  @media(max-width: 1800px) { //add specific to the resolution config
+    width: 70%;
+  }
 }
 
 .navigation {
@@ -42,7 +47,7 @@
 }
 
 .navigation .label {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 25px;
 }
 
@@ -291,28 +296,40 @@ info:hover, info:active, input:hover+info, input:active+info {
 .low .about .design {
   position: relative;
   padding-top: 160px; //margin equal to the .mid-header's height
-  margin-left: -52%;
+  margin-left: -50%;
+  margin-right: -50%;
   white-space: nowrap;
   overflow: hidden;
   color: @colorGray;
 }
+.low .about .creativity {
+  color: @colorBlue;
+  font-size: 2.5em;
+  margin-top: 10%;
+  right: 5%;
+  position: absolute;
+  font-family: @ohyeahfont;
+}
 
 .low .about .my-love {
-  color: teal;
-  font-size: 1em; //15px;
+  color: @colorBlue;
+  font-size: 1.5em; //15px;
   position: absolute;
-  right: 0px;
-  width: 20%; //of parent who is 50% of whole
-  margin-top: 6%;
-  text-transform: uppercase;
+  right: 5%;
+  width: 30%; //of parent who is 50% of whole
+  margin-top: 20%;
+  font-weight: 100;
   display: block;
+  text-align: right;
+
 
 }
 
 .low .about .palette {
-  background-image: url("img/pallete1.png");
-  position: relative;
-  margin-top: 10%;
+  background-image: url("img/palette.png");
+  position: absolute;
+  margin-top: 15%;
+  //margin-left: 15%;
   width: 551px;
   height: 311px;
 
@@ -333,10 +350,11 @@ info:hover, info:active, input:hover+info, input:active+info {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: @kgtFont;
+  margin-bottom: 20px;
+  font-family: @robotofont;
   text-transform: uppercase;
   line-height: 1.1em;
-  font-size: 6em;
+  font-size: 1em;
 }
 
 .low .portfolio .nivoSlider img {
