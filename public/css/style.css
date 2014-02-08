@@ -9,6 +9,12 @@ body {
   margin: 0px;
   height: 7000px;
   width: 100%;
+  font-size: 100%;
+}
+@media (max-width: 1024px) {
+  body {
+    font-size: 70%;
+  }
 }
 a {
   color: #00B7FF;

@@ -23,14 +23,19 @@
 } */
 
 .section-content {
-  margin-left: 22%;
+  margin-left: auto;
   margin-right: auto;
   width: 60%;
+  height: 100%;
   position: relative;
 
-  @media(max-width: 1800px) { //add specific to the resolution config
-    width: 70%;
+  @media(max-width: 1024px) { //add specific to the resolution config
+    margin-left:11%;
+    width: 85%;
   }
+//  @media(max-width: 1800px) { //add specific to the resolution config
+//    width: 70%;
+//  }
 }
 
 .navigation {
@@ -44,11 +49,20 @@
   color: @colorGray;
   font-family: @vrindaFont;
   text-align: center;
+
+
+  @media(max-width: 1024px) { //add specific to the resolution config
+    left:1%;
+  }
 }
 
 .navigation .label {
   margin-bottom: 5px;
   font-size: 25px;
+  @media(max-width: 1024px) { //add specific to the resolution config
+    margin-top:5px;
+    margin-bottom: 0px;
+  }
 }
 
 .navigation .scroll-label {
@@ -65,6 +79,11 @@
   display: block;
   font-size: 4em; //50px;
   text-decoration: none;
+
+  @media(max-width: 1024px) { //add specific to the resolution config
+    height:40px;
+    width:40px;
+  }
 }
 
 .nav-btn-active {
@@ -151,10 +170,12 @@ info:hover, info:active, input:hover+info, input:active+info {
 
 //TITLE
 .hi .main-title {
+  position: absolute;
   font-family: @vrindaFont;
   margin-left: 5%;
   margin-top: 5%;
   color: @colorGray;
+  z-index:2000;
 }
 
 .hi .main-title .subtitle-block {
@@ -174,6 +195,24 @@ info:hover, info:active, input:hover+info, input:active+info {
   font-size: 5.4em; // 86px;
   display: inline-block;
 }
+
+
+//Animation box
+
+.hi .brush-animation-box {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  //overflow: hidden;
+  //background-color: yellow;
+  top:100px;
+  @media(max-height: 600px) { //add specific to the resolution config
+    top:-100px;
+  }
+}
+
+
 
 //Images
 .hi .glass_perm {
@@ -219,14 +258,14 @@ info:hover, info:active, input:hover+info, input:active+info {
 }
 
 .hi .names .first-name {
-  font-size: 6.3em; // 101px;
+  font-size:  101px; //6.3em; // 101px;
   line-height: 1.1em;
   margin-bottom: -30px;
 
 }
 
 .hi .names .last-name {
-  font-size: 7em; //112px;
+  font-size: 112px; // 7em; //112px;
   line-height: 1.1em;
   z-index: 1;
 
@@ -293,43 +332,51 @@ info:hover, info:active, input:hover+info, input:active+info {
   position: relative;
 }
 
+.low .about .about-content {
+  position: absolute;
+  top:170px;
+  width: 100%;
+  height: 100%;
+}
+
 .low .about .design {
   position: relative;
   padding-top: 160px; //margin equal to the .mid-header's height
   margin-left: -50%;
   margin-right: -50%;
+
   white-space: nowrap;
   overflow: hidden;
   color: @colorGray;
 }
-.low .about .creativity {
+
+.low .about .text {
+  margin-top: 50px;
+  right:0%;
+  position: absolute;
+  width: 30%;
+  text-align: right;
+}
+
+.low .about .text .title {
   color: @colorBlue;
   font-size: 2.5em;
-  margin-top: 10%;
-  right: 5%;
-  position: absolute;
   font-family: @ohyeahfont;
 }
 
-.low .about .my-love {
+.low .about .text .text-body {
   color: @colorBlue;
   font-size: 1.5em; //15px;
-  position: absolute;
-  right: 5%;
-  width: 30%; //of parent who is 50% of whole
   margin-top: 20%;
   font-weight: 100;
   display: block;
   text-align: right;
-
-
 }
 
 .low .about .palette {
   background-image: url("img/palette.png");
   position: absolute;
-  margin-top: 15%;
-  //margin-left: 15%;
+  margin-top: 50px;
   width: 551px;
   height: 311px;
 
@@ -337,7 +384,7 @@ info:hover, info:active, input:hover+info, input:active+info {
 
 .low .portfolio {
   position: absolute;
-  padding-top: 10%;
+  padding-top: 150px;
   background-color: black;
   width: 100%;
   height: 100%;
@@ -350,6 +397,7 @@ info:hover, info:active, input:hover+info, input:active+info {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
   margin-bottom: 20px;
   font-family: @robotofont;
   text-transform: uppercase;
@@ -367,7 +415,7 @@ info:hover, info:active, input:hover+info, input:active+info {
   background-image: url("img/bg.png");
   background-repeat: repeat;
   position: absolute;
-  padding-top: 15%;
+  padding-top: 150px;
   background-color: @colorYellow;
   width: 100%;
   height: 100%;
@@ -378,8 +426,8 @@ info:hover, info:active, input:hover+info, input:active+info {
 }
 
 .low .contacts .title {
-  font-family: @kgtFont;
-  color: @colorRed;
+  font-family: @ohyeahfont;
+  color: @colorGray;
   text-align: left;
   font-size: 3em;//50px;
   line-height: 1.1em;

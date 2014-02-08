@@ -13,6 +13,7 @@ html {
   width: 100%;
   color:@colorYellow;
   //overflow: hidden;
+
 }
 
 body {
@@ -22,6 +23,11 @@ body {
   margin: 0px;
   height: 7000px;
   width: 100%;
+  font-size: 100%;
+
+  @media(max-width: 1024px) { //add specific to the resolution config
+    font-size: 70%;
+  }
 }
 
 a {

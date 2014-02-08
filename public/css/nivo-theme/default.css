@@ -38,7 +38,6 @@ Supports Thumbs: true
   border:0;
   margin: 0 2px;
     */
-
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -62,6 +61,7 @@ Supports Thumbs: true
   -moz-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  top: 0%;
 }
 .theme-default:hover .nivo-directionNav a {
   opacity: 1;
@@ -69,13 +69,15 @@ Supports Thumbs: true
 .theme-default a.nivo-nextNav {
   background-image: url('right.png');
   width: 50px;
-  height: 50px;
+  background-position: center;
+  height: 100%;
   right: 15px;
 }
 .theme-default a.nivo-prevNav {
   background-image: url('left.png');
   width: 50px;
-  height: 50px;
+  background-position: center;
+  height: 100%;
   left: 15px;
 }
 .theme-default .nivo-caption {

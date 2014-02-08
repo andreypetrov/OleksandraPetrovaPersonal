@@ -7,14 +7,16 @@
   display: block;
 } */
 .section-content {
-  margin-left: 22%;
+  margin-left: auto;
   margin-right: auto;
   width: 60%;
+  height: 100%;
   position: relative;
 }
-@media (max-width: 1800px) {
+@media (max-width: 1024px) {
   .section-content {
-    width: 70%;
+    margin-left: 11%;
+    width: 85%;
   }
 }
 .navigation {
@@ -29,9 +31,20 @@
   font-family: vrinda, "Helvetica Neue", Arial, sans-serif;
   text-align: center;
 }
+@media (max-width: 1024px) {
+  .navigation {
+    left: 1%;
+  }
+}
 .navigation .label {
   margin-bottom: 5px;
   font-size: 25px;
+}
+@media (max-width: 1024px) {
+  .navigation .label {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
 }
 .navigation .scroll-label {
   margin-top: 50px;
@@ -46,6 +59,12 @@
   display: block;
   font-size: 4em;
   text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .nav-btn {
+    height: 40px;
+    width: 40px;
+  }
 }
 .nav-btn-active {
   margin-top: -10px;
@@ -73,6 +92,12 @@
   display: block;
   font-size: 4em;
   text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .navigation .nav-btn-scroller {
+    height: 40px;
+    width: 40px;
+  }
 }
 /*.nav-btn .info {
   margin-top: 10%;
@@ -128,10 +153,12 @@ input:active + info {
   padding-top: 1px;
 }
 .hi .main-title {
+  position: absolute;
   font-family: vrinda, "Helvetica Neue", Arial, sans-serif;
   margin-left: 5%;
   margin-top: 5%;
   color: #b7b7b8;
+  z-index: 2000;
 }
 .hi .main-title .subtitle-block {
   width: 150px;
@@ -146,6 +173,18 @@ input:active + info {
 .hi .main-title .title {
   font-size: 5.4em;
   display: inline-block;
+}
+.hi .brush-animation-box {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100px;
+}
+@media (max-height: 600px) {
+  .hi .brush-animation-box {
+    top: -100px;
+  }
 }
 .hi .glass_perm {
   background-image: url("img/glass_perm.png");
@@ -187,12 +226,12 @@ input:active + info {
   font-family: kgt, "Helvetica Neue", Arial, sans-serif;
 }
 .hi .names .first-name {
-  font-size: 6.3em;
+  font-size: 101px;
   line-height: 1.1em;
   margin-bottom: -30px;
 }
 .hi .names .last-name {
-  font-size: 7em;
+  font-size: 112px;
   line-height: 1.1em;
   z-index: 1;
 }
@@ -243,6 +282,12 @@ input:active + info {
   height: 100%;
   position: relative;
 }
+.low .about .about-content {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  height: 100%;
+}
 .low .about .design {
   position: relative;
   padding-top: 160px;
@@ -252,20 +297,21 @@ input:active + info {
   overflow: hidden;
   color: #b7b7b8;
 }
-.low .about .creativity {
+.low .about .text {
+  margin-top: 50px;
+  right: 0%;
+  position: absolute;
+  width: 30%;
+  text-align: right;
+}
+.low .about .text .title {
   color: #4b849a;
   font-size: 2.5em;
-  margin-top: 10%;
-  right: 5%;
-  position: absolute;
   font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
 }
-.low .about .my-love {
+.low .about .text .text-body {
   color: #4b849a;
   font-size: 1.5em;
-  position: absolute;
-  right: 5%;
-  width: 30%;
   margin-top: 20%;
   font-weight: 100;
   display: block;
@@ -274,13 +320,13 @@ input:active + info {
 .low .about .palette {
   background-image: url("img/palette.png");
   position: absolute;
-  margin-top: 15%;
+  margin-top: 50px;
   width: 551px;
   height: 311px;
 }
 .low .portfolio {
   position: absolute;
-  padding-top: 10%;
+  padding-top: 150px;
   background-color: black;
   width: 100%;
   height: 100%;
@@ -292,6 +338,7 @@ input:active + info {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
   margin-bottom: 20px;
   font-family: roboto, "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
@@ -307,15 +354,15 @@ input:active + info {
   background-image: url("img/bg.png");
   background-repeat: repeat;
   position: absolute;
-  padding-top: 15%;
+  padding-top: 150px;
   background-color: #fffcf2;
   width: 100%;
   height: 100%;
   top: 100%;
 }
 .low .contacts .title {
-  font-family: kgt, "Helvetica Neue", Arial, sans-serif;
-  color: #ed1c24;
+  font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
+  color: #b7b7b8;
   text-align: left;
   font-size: 3em;
   line-height: 1.1em;
