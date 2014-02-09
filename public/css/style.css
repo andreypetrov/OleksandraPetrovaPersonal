@@ -11,7 +11,7 @@ body {
   width: 100%;
   font-size: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-height: 800px) {
   body {
     font-size: 70%;
   }

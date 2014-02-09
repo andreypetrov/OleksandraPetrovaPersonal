@@ -14,6 +14,20 @@ Supports Thumbs: true
   -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
   -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
   box-shadow: 0px 1px 5px 0px #4a4a4a;
+  width: 632px;
+  height: 450px;
+}
+@media (max-height: 700px) {
+  .theme-default .nivoSlider {
+    width: 432px;
+    height: 300px;
+  }
+}
+@media (min-height: 700px) and (max-height: 800px) {
+  .theme-default .nivoSlider {
+    width: 532px;
+    height: 400px;
+  }
 }
 .theme-default .nivoSlider img {
   position: absolute;
@@ -38,6 +52,7 @@ Supports Thumbs: true
   border:0;
   margin: 0 2px;
     */
+
   display: inline-block;
   width: 10px;
   height: 10px;
