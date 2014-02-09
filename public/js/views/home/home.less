@@ -71,7 +71,7 @@
 }
 
 .navigation .label {
-  margin-top:5px;
+  margin-top:15px;
   margin-bottom: 5px;
   font-size: 25px;
   @media(max-width: 1300px) { //add specific to the resolution config
@@ -99,6 +99,12 @@
     height:40px;
     width:40px;
   }
+
+  @media (min-height:700px) and (max-height: 800px) { //add specific to the resolution config
+    height:55px;
+    width:55px;
+  }
+
 }
 
 .nav-btn-active {
@@ -219,6 +225,7 @@ info:hover, info:active, input:hover+info, input:active+info {
   position: absolute;
   width: 100%;
   height: 100%;
+  left:10%;
   //overflow: hidden;
   //background-color: yellow;
   top:50px;
