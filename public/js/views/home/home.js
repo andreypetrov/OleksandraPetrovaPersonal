@@ -31,6 +31,10 @@ define([
         contactsNavEl: 0,
         activeNavEl: 0,
 
+        emailNameEl: 0,
+        emailEmailEl: 0,
+        emailMessageEl: 0,
+
 
         initialize: function () {
             ArchView.prototype.initialize.apply(this); //super call
@@ -50,6 +54,10 @@ define([
             this.aboutNavEl = this.$el.find('.nav-about').find('a');
             this.portfolioNavEl = this.$el.find('.nav-portfolio').find('a');
             this.contactsNavEl = this.$el.find('.nav-contacts').find('a');
+
+            this.emailNameEl = this.$el.find('.email-name');
+            this.emailEmailEl = this.$el.find('.email-email');
+            this.emailMessageEl = this.$el.find('.email-message');
 
             this.initNavBar();
         },
@@ -102,11 +110,7 @@ define([
         },
 
         events: {
-            "click .menu-btn-start": "onStart",
-            "click .menu-btn-settings": "onSettings",
-            "click .menu-btn-about": "onAbout",
-            "click .menu-btn-rules": "onRules"
-
+            "click .email-submit": "onEmailSubmit"
         },
 
 
@@ -158,13 +162,43 @@ define([
         },
 
         getCurrentPageButton: function () {
-            console.log("we are here");
+            //console.log("we are here");
             var scrollTop = skrollr.get().getScrollTop();
             console.log(scrollTop);
             if (scrollTop < 3500) return this.hiNavEl;
             if (scrollTop < 4500) return this.aboutNavEl;
             if (scrollTop < 5500) return this.portfolioNavEl;
             else return this.contactsNavEl;
+        },
+
+        onEmailSubmit: function () {
+
+            var data = JSON.stringify(this.getEmailObject());
+
+            $.ajax({
+                type: "POST",
+                url: "/email",
+                // The key needs to match your method's input parameter (case-sensitive).
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                //dataType: "json",
+                success: function (result) {
+                    alert(result);
+                },
+                failure: function (errMsg) {
+                    alert(errMsg);
+                }
+            });
+
+
+        },
+
+        getEmailObject: function () {
+            var emailObject = {}; //create an empty object to hold the values
+            emailObject.name = this.emailNameEl.val();
+            emailObject.email = this.emailEmailEl.val();
+            emailObject.message = this.emailMessageEl.val();
+            return emailObject;
         }
 
     })

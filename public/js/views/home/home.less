@@ -109,9 +109,9 @@
 }
 
 
-.navigation .nav-btn:hover,
-.navigation .nav-btn:focus,
-.navigation .nav-btn:active {
+.nav-btn:hover,
+.nav-btn:focus,
+.nav-btn:active {
   margin-top: -10px;
   width: 80px;
   height: 80px;
@@ -443,6 +443,13 @@
 .low .contacts .contact-paragraph {
 }
 
+.low .contacts .column {
+  width:50%;
+  float:left;
+  display: block;
+}
+
+
 .low .contacts .title  {
   font-family: @ohyeahfont;
   color: @colorGray;
@@ -454,7 +461,6 @@
 }
 
 .low .contacts .second {
-  //margin-top: 0;
   text-align: right;
 }
 
@@ -475,3 +481,31 @@
   font-size: 1.5em;
 }
 
+.contacts .input {
+  display:block;
+  font-family: @robotofont;
+  font-size: 1em;
+  line-height: 1.1em;
+  padding: 10px;
+  height: 3em;
+
+  margin-bottom: 50px;
+  width:100%;
+}
+
+.contacts .email-message {
+  height:200px;
+}
+
+
+.contacts .email-submit {
+  color:@colorRed;
+}
+
+
+.contacts .email-submit:hover,
+.contacts .email-submit:focus,
+.contacts .email-submit:active,
+{
+  cursor: pointer;
+}
