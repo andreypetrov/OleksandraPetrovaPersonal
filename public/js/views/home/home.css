@@ -423,6 +423,7 @@
   border-top-color: #4b849a;
   border-width: 3px;
   background: none;
+  margin-bottom: 10px;
 }
 ::-webkit-input-placeholder {
   /* WebKit browsers */
