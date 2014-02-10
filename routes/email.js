@@ -25,7 +25,7 @@ var send = function(req, res) {
 
 var sendEmail = function(body) {
     sendgrid.send({
-        to: 'rokanor@gmail.com',
+        to: 'oleksandra.sydorenko@hotmail.com',
         from: body.email,
         fromname: body.name,
         subject: 'Oleksandra Portfolio Website Email',
