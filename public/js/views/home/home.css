@@ -294,7 +294,7 @@
 }
 .low .about .about-wrapper {
   position: absolute;
-  top: 200px;
+  top: 150px;
   width: 100%;
   height: 100%;
 }
@@ -316,8 +316,8 @@
   margin-top: 0px;
   right: 0%;
   position: absolute;
-  width: 60%;
-  text-align: right;
+  width: 100%;
+  text-align: center;
 }
 @media (max-width: 1100px) {
   .low .about .text {
@@ -331,17 +331,20 @@
 }
 .low .about .text .text-body {
   color: dimgray;
-  font-size: 1.5em;
-  margin-top: 5%;
+  font-size: 2em;
+  margin-top: 1%;
   font-weight: 100;
-  margin-left: 40%;
+  margin-left: 0%;
   display: block;
-  text-align: right;
+  text-align: left;
+  font-family: alwaysto, "Helvetica Neue", Arial, sans-serif;
+  margin-top: 0.5em;
 }
 .low .about .palette {
   background-image: url("img/palette.png");
-  position: absolute;
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   width: 551px;
   height: 311px;
 }
@@ -385,42 +388,64 @@
   width: 50%;
   float: left;
   display: block;
+  margin-top: 5%;
 }
-.low .contacts .title {
+.low .contacts .title1 {
   font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
   color: #b7b7b8;
   font-size: 3em;
   line-height: 1.1em;
+  margin-bottom: 10px;
+}
+.low .contacts .title2 {
+  font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
+  color: #b7b7b8;
+  font-size: 3em;
+  line-height: 1.1em;
+  margin-top: 30px;
 }
 .low .contacts .body-more {
-  font-family: roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: alwaysto, "Helvetica Neue", Arial, sans-serif;
   display: block;
-  width: 50%;
+  width: 70%;
   color: dimgray;
+  font-size: 2em;
 }
 .low .contacts a {
   margin-top: 10px;
+  color: #ed1c24;
   text-decoration: none;
   font-family: kgt, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 .contacts .input {
   display: block;
-  font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.3em;
-  line-height: 1.1em;
+  font-family: alwaysto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.8em;
+  line-height: 1.5em;
   padding: 10px;
   height: 3em;
-  margin-bottom: 50px;
-  width: 100%;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-width: 3px;
+  background: none;
+  margin-bottom: 0px;
+  width: 85%;
+  float: right;
+}
+/*.contacts .email-myemail{
+   border-top-color: @colorGray;
+ } */
+contacts .email-email {
+  border-top-color: #b7b7b8;
 }
 .contacts .email-message {
   height: 200px;
   border-bottom: none;
   border-left: none;
   border-right: none;
-  border-top-color: #4b849a;
+  border-top-color: #b7b7b8;
   border-width: 3px;
   background: none;
   margin-bottom: 10px;

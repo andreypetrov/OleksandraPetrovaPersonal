@@ -25,6 +25,10 @@ a {
   color: #00B7FF;
 }
 @font-face {
+  font-family: alwaysto;
+  src: url(../fonts/Always%20Together.otf);
+}
+@font-face {
   font-family: kgt;
   src: url(../fonts/KGTangledUpInYou2.ttf);
 }
