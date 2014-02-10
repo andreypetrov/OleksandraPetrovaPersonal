@@ -12,7 +12,8 @@ var requirejs = require('requirejs');
 //Email add on
 var sendgrid  = require('sendgrid')(
     process.env.SENDGRID_USERNAME,
-    process.env.SENDGRID_PASSWORD
+    process.env.SENDGRID_PASSWORD,
+    {api: 'smtp'}
 );
 
 var app = express();
