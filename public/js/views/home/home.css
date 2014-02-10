@@ -207,6 +207,7 @@
   /*@media(max-height: 800px) { //add specific to the resolution config
     top: 120px;
   } */
+
 }
 .hi .paintbuck {
   background-image: url("img/paintbuck2.png");
@@ -391,12 +392,6 @@
   font-size: 3em;
   line-height: 1.1em;
 }
-.low .contacts .first {
-  text-align: left;
-}
-.low .contacts .second {
-  text-align: right;
-}
 .low .contacts .body-more {
   font-family: roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
@@ -405,7 +400,6 @@
 }
 .low .contacts a {
   margin-top: 10px;
-  color: #ed1c24;
   text-decoration: none;
   font-family: kgt, "Helvetica Neue", Arial, sans-serif;
   display: block;
@@ -413,8 +407,8 @@
 }
 .contacts .input {
   display: block;
-  font-family: roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1em;
+  font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.3em;
   line-height: 1.1em;
   padding: 10px;
   height: 3em;
@@ -423,6 +417,17 @@
 }
 .contacts .email-message {
   height: 200px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top-color: #4b849a;
+  border-width: 3px;
+  background: none;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+
+  color: #4b849a;
 }
 .contacts .email-submit {
   color: #ed1c24;
