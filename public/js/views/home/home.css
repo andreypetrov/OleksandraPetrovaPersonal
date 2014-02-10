@@ -260,7 +260,7 @@
   width: 100%;
 }
 .low .mid-header {
-  background-color: #f0f0f0;
+  background-image: url("img/bg.png");
   position: absolute;
   width: 100%;
   height: 100px;
@@ -319,11 +319,6 @@
   width: 100%;
   text-align: center;
 }
-@media (max-width: 1100px) {
-  .low .about .text {
-    width: 50%;
-  }
-}
 .low .about .text .title {
   color: #4b849a;
   font-size: 2.5em;
@@ -334,7 +329,7 @@
   font-size: 2em;
   margin-top: 1%;
   font-weight: 100;
-  margin-left: 0%;
+  margin-left: 7%;
   display: block;
   text-align: left;
   font-family: alwaysto, "Helvetica Neue", Arial, sans-serif;
