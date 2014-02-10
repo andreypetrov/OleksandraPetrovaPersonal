@@ -9,6 +9,11 @@ var path = require('path');
 var requirejs = require('requirejs');
 
 
+//Email add on
+var sendgrid  = require('sendgrid')(
+    process.env.SENDGRID_USERNAME,
+    process.env.SENDGRID_PASSWORD
+);
 
 var app = express();
 
@@ -30,8 +35,22 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+sendgrid.send({
+    to: 'rokanor@gmail.com',
+    from: 'sender@example.com',
+    subject: 'Hello World',
+    text: 'Sending email with NodeJS through SendGrid!'
+}, function(err, json) {
+    if (err) { return console.error(err); }
+    console.log(json);
+});
+
+
 //app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+
+

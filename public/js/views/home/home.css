@@ -269,7 +269,7 @@
 }
 .low .mid-header .names {
   -webkit-backface-visibility: hidden;
-  margin-top: 20px;
+  margin-top: 15px;
   line-height: 1.1em;
   text-align: center;
   font-family: kgt, "Helvetica Neue", Arial, sans-serif;
@@ -305,7 +305,7 @@
 }
 .low .about .design {
   position: relative;
-  padding-top: 160px;
+  padding-top: 100px;
   margin-left: -50%;
   margin-right: -50%;
   white-space: nowrap;
@@ -313,7 +313,7 @@
   color: #b7b7b8;
 }
 .low .about .text {
-  margin-top: 50px;
+  margin-top: 0px;
   right: 0%;
   position: absolute;
   width: 60%;
@@ -321,7 +321,7 @@
 }
 @media (max-width: 1100px) {
   .low .about .text {
-    width: 60%;
+    width: 50%;
   }
 }
 .low .about .text .title {
@@ -330,7 +330,7 @@
   font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
 }
 .low .about .text .text-body {
-  color: #4b849a;
+  color: dimgray;
   font-size: 1.5em;
   margin-top: 5%;
   font-weight: 100;
@@ -384,9 +384,20 @@
 .low .contacts .title {
   font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
   color: #b7b7b8;
-  text-align: left;
   font-size: 3em;
   line-height: 1.1em;
+}
+.low .contacts .first {
+  text-align: left;
+}
+.low .contacts .second {
+  text-align: right;
+}
+.low .contacts .body-more {
+  font-family: roboto, "Helvetica Neue", Arial, sans-serif;
+  display: block;
+  width: 50%;
+  color: dimgray;
 }
 .low .contacts a {
   margin-top: 10px;
