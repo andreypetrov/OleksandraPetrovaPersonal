@@ -477,16 +477,31 @@
   font-size: 2em;
 }
 
+.low .contacts .icon {
+  margin-top: 20px;
+  color: @colorRed;
+  text-decoration: none;
+  font-family: @kgtFont;
+  border: none;
+  display: inline-block;
+  font-size: 3em;
+  position: relative;
+  margin-right: 10px;
+}
+
 .low .contacts a {
+  text-decoration: none;
+}
+
+.low .contacts .email {
   margin-top: 10px;
   color: @colorRed;
   text-decoration: none;
   font-family: @kgtFont;
-  //display: block;
   font-size: 2em;
-}
-
-.low .contacts .email {
+  text-align: left;
+  border: none;
+  text-decoration: none;
 }
 
 .contacts .input {
@@ -554,8 +569,9 @@ contacts .email-email {
 
 }
 
-.contacts .email-message {
-  height: 200px;
+
+.contacts .stack .email-message {
+
   //  border-bottom: none;
   //  border-left: none;
   //  border-right: none;
@@ -564,23 +580,21 @@ contacts .email-email {
   background: none;
   padding-top: 30px;
   margin-bottom: 10px;
+  position: absolute;
+  width: 50%;
+  height: 28%;
 
 }
 
-
-.contacts .email-myemail {;
-}
-
-.contacts .email-submit {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0px;
-  width: 100%;
-  display: block;
+.contacts .stack .email-submit {
+  position: absolute;
+  bottom: 37%;
+  width: 50%;
+  //display: block;
   font-size: 4em;
-  text-decoration: none;
-  text-align: center;
+  text-align: right;
   color: @colorRed;
+  z-index: 1;
 
 }
 
@@ -589,7 +603,9 @@ contacts .email-email {
 .contacts .email-submit:active,
 {
   .nav-btn;
+  width: 50%;
+  text-align: right;
   cursor: pointer;
-  margin-top: -2%;//use percentage to test on bigger resolutions
+  margin-top: 1%;//use percentage to test on bigger resolutions
   font-size: 5em;
 }

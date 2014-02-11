@@ -383,12 +383,28 @@
   color: dimgray;
   font-size: 2em;
 }
-.low .contacts a {
-  margin-top: 10px;
+.low .contacts .icon {
+  margin-top: 20px;
   color: #ed1c24;
   text-decoration: none;
   font-family: kgt, "Helvetica Neue", Arial, sans-serif;
+  border: none;
+  display: inline-block;
+  font-size: 3em;
+  position: relative;
+  margin-right: 10px;
+}
+.low .contacts a {
+  text-decoration: none;
+}
+.low .contacts .email {
+  margin-top: 10px;
+  color: #ed1c24;
+  font-family: kgt, "Helvetica Neue", Arial, sans-serif;
   font-size: 2em;
+  text-align: left;
+  border: none;
+  text-decoration: none;
 }
 .contacts .input {
   display: block;
@@ -439,22 +455,22 @@
   border-right: none;
   color: #4b849a;
 }
-.contacts .email-message {
-  height: 200px;
+.contacts .stack .email-message {
   background: none;
   padding-top: 30px;
   margin-bottom: 10px;
+  position: absolute;
+  width: 50%;
+  height: 28%;
 }
-.contacts .email-submit {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0px;
-  width: 100%;
-  display: block;
+.contacts .stack .email-submit {
+  position: absolute;
+  bottom: 37%;
+  width: 50%;
   font-size: 4em;
-  text-decoration: none;
-  text-align: center;
+  text-align: right;
   color: #ed1c24;
+  z-index: 1;
 }
 .contacts .email-submit:hover,
 .contacts .email-submit:focus,
@@ -467,7 +483,9 @@
   font-size: 4em;
   text-decoration: none;
   text-align: center;
+  width: 50%;
+  text-align: right;
   cursor: pointer;
-  margin-top: -2%;
+  margin-top: 1%;
   font-size: 5em;
 }
