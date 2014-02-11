@@ -11,6 +11,8 @@ Supports Thumbs: true
 @kgtFont: kgt, "Helvetica Neue", Arial, sans-serif;
 @vrindaFont: vrinda, "Helvetica Neue", Arial, sans-serif;
 @robotofont: roboto, "Helvetica Neue", Arial, sans-serif;
+@alwaysFont: alwaysto, "Helvetica Neue", Arial, sans-serif;
+
 
 .theme-default .nivoSlider {
   position: relative;
@@ -30,8 +32,14 @@ Supports Thumbs: true
     width: 612px;
     height: 480px;
   }
-  width: 732px;
-  height: 550px;
+
+  @media (min-height: 800px) and (max-height:900px) {
+    width: 732px;
+    height: 550px;
+  }
+
+  width: 832px;
+  height: 650px;
 }
 
 .theme-default .nivoSlider img {
