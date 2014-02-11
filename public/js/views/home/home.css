@@ -34,7 +34,7 @@
   top: 65px;
   left: 7%;
   width: 100px;
-  height: 10%;
+  height: 100%;
   position: fixed;
   display: block;
   z-index: 1200;
@@ -48,8 +48,27 @@
   }
 }
 .navigation .label {
-  margin-bottom: 5px;
+  margin-bottom: 5%;
   font-size: 25px;
+}
+.navigation .nav {
+  position: absolute;
+  width: 100%;
+}
+.nav-hi {
+  top: 0%;
+}
+.nav-about {
+  top: 15%;
+}
+.nav-portfolio {
+  top: 30%;
+}
+.nav-contacts {
+  top: 45%;
+}
+.nav-scroll {
+  top: 60%;
 }
 .navigation .scroll-label {
   margin-top: 50px;
@@ -59,23 +78,11 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
-  width: 70px;
-  height: 70px;
+  width: 100%;
   display: block;
   font-size: 4em;
   text-decoration: none;
-}
-@media (max-height: 700px) {
-  .nav-btn {
-    height: 55px;
-    width: 55px;
-  }
-}
-@media (min-height: 700px) and (max-height: 800px) {
-  .nav-btn {
-    height: 65px;
-    width: 65px;
-  }
+  text-align: center;
 }
 .label-active {
   visibility: visible;
@@ -83,48 +90,18 @@
 .nav-btn:hover,
 .nav-btn:focus,
 .nav-btn:active {
-  margin-top: -10px;
-  width: 80px;
-  height: 80px;
+  margin-top: -5%;
   font-size: 5em;
-}
-@media (max-height: 700px) {
-  .nav-btn:hover,
-  .nav-btn:focus,
-  .nav-btn:active {
-    height: 65px;
-    width: 65px;
-  }
-}
-@media (min-height: 700px) and (max-height: 800px) {
-  .nav-btn:hover,
-  .nav-btn:focus,
-  .nav-btn:active {
-    height: 75px;
-    width: 75px;
-  }
 }
 .navigation .nav-btn-scroller {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
-  width: 70px;
-  height: 70px;
+  width: 100%;
   display: block;
   font-size: 4em;
   text-decoration: none;
-}
-@media (max-height: 700px) {
-  .navigation .nav-btn-scroller {
-    height: 55px;
-    width: 55px;
-  }
-}
-@media (min-height: 700px) and (max-height: 800px) {
-  .navigation .nav-btn-scroller {
-    height: 65px;
-    width: 65px;
-  }
+  text-align: center;
 }
 .navigation .scroll-hint .label {
   margin-top: 10%;
@@ -420,41 +397,77 @@
   line-height: 1.5em;
   padding: 10px;
   height: 3em;
-  border-bottom: none;
+  vertical-align: top;
+  border-top: 3px solid #b7b7b8;
+  border-bottom: 3px solid #b7b7b8;
   border-left: none;
   border-right: none;
-  border-width: 3px;
   background: none;
-  margin-bottom: 0px;
-  width: 85%;
-  float: right;
+  width: 100%;
 }
-/*.contacts .email-myemail{
-   border-top-color: @colorGray;
- } */
-contacts .email-email {
-  border-top-color: #b7b7b8;
+.contacts .input:hover,
+.contacts .input:focus,
+.contacts .input:active {
+  outline: 10px;
+  outline-color: #ed1c24;
+  text-decoration: tomato;
 }
-.contacts .email-message {
-  height: 200px;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  border-top-color: #b7b7b8;
-  border-width: 3px;
-  background: none;
-  margin-bottom: 10px;
-}
-::-webkit-input-placeholder {
+.contacts .input::-webkit-input-placeholder {
   /* WebKit browsers */
 
   color: #4b849a;
 }
+.contacts .input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.contacts .input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.contacts .input:focus::-moz-placeholder {
+  color: transparent;
+}
+.contacts .email-to {
+  font-family: alwaysto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.8em;
+  line-height: 1.5em;
+  padding: 10px;
+  height: 3em;
+  display: table-cell;
+  vertical-align: middle;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  color: #4b849a;
+}
+.contacts .email-message {
+  height: 200px;
+  background: none;
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
 .contacts .email-submit {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 100%;
+  display: block;
+  font-size: 4em;
+  text-decoration: none;
+  text-align: center;
   color: #ed1c24;
 }
 .contacts .email-submit:hover,
 .contacts .email-submit:focus,
 .contacts .email-submit:active {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 100%;
+  display: block;
+  font-size: 4em;
+  text-decoration: none;
+  text-align: center;
   cursor: pointer;
+  margin-top: -2%;
+  font-size: 5em;
 }

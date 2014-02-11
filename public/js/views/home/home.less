@@ -1,8 +1,8 @@
 @kgtFont: kgt, "Helvetica Neue", Arial, sans-serif;
 @vrindaFont: vrinda, "Helvetica Neue", Arial, sans-serif;
-@robotofont: roboto, "Helvetica Neue", Arial, sans-serif;
-@ohyeahfont: ohyeah, "Helvetica Neue", Arial, sans-serif;
-@alwaysfont: alwaysto, "Helvetica Neue", Arial, sans-serif;
+@robotoFont: roboto, "Helvetica Neue", Arial, sans-serif;
+@ohyeahFont: ohyeah, "Helvetica Neue", Arial, sans-serif;
+@alwaysFont: alwaysto, "Helvetica Neue", Arial, sans-serif;
 
 @colorLightGray: #e9e8e6;
 @colorGray: #b7b7b8;
@@ -30,8 +30,9 @@
   height: 100%;
   position: relative;
 
-  @media(max-width: 1300px) { //add specific to the resolution config
-    margin-left:11%;
+  @media (max-width: 1300px) {
+    //add specific to the resolution config
+    margin-left: 11%;
     width: 85%;
   }
 
@@ -43,13 +44,13 @@
     width: 60%;
   }
 
-//  @media(max-height: 600px) { //add specific to the resolution config
-//    margin-left:11%;
-//    width: 85%;
-//  }
-//  @media(max-width: 1800px) { //add specific to the resolution config
-//    width: 70%;
-//  }
+  //  @media(max-height: 600px) { //add specific to the resolution config
+  //    margin-left:11%;
+  //    width: 85%;
+  //  }
+  //  @media(max-width: 1800px) { //add specific to the resolution config
+  //    width: 70%;
+  //  }
 }
 
 .navigation {
@@ -57,7 +58,7 @@
   top: 65px; //manipulated in homeTemplate by skrollr
   left: 7%;
   width: 100px;
-  height: 10%;
+  height: 100%;
   position: fixed;
   display: block;
   z-index: 1200;
@@ -65,20 +66,44 @@
   font-family: @vrindaFont;
   text-align: center;
 
-
-  @media(max-width: 1300px) { //add specific to the resolution config
-    left:1%;
+  @media (max-width: 1300px) {
+    //add specific to the resolution config
+    left: 1%;
   }
 }
 
 .navigation .label {
-  margin-bottom: 5px;
+  margin-bottom: 5%; //use percentage to test how it looks on a bigger resolution
   font-size: 25px;
+}
 
+.navigation .nav {
+  position: absolute;
+  width: 100%;
+}
+
+.nav-hi {
+  top: 0%;
+}
+
+.nav-about {
+  top: 15%;
+}
+
+.nav-portfolio {
+  top: 30%;
+}
+
+.nav-contacts {
+  top: 45%;
+}
+
+.nav-scroll {
+  top: 60%;
 }
 
 .navigation .scroll-label {
-  margin-top:50px;
+  margin-top: 50px;
   visibility: visible;
 }
 
@@ -86,58 +111,29 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
-  width: 70px;
-  height: 70px;
+  width: 100%;
   display: block;
-  font-size: 4em; //50px;
+  font-size: 4em;
   text-decoration: none;
-
-  @media(max-height: 700px) { //add specific to the resolution config
-    height:55px;
-    width:55px;
-  }
-
-  @media (min-height:700px) and (max-height: 800px) { //add specific to the resolution config
-    height:65px;
-    width:65px;
-  }
+  text-align: center;
 
 }
-
 
 .label-active {
   visibility: visible;
 }
 
-
 .nav-btn:hover,
 .nav-btn:focus,
 .nav-btn:active {
-  margin-top: -10px;
-  width: 80px;
-  height: 80px;
+  margin-top: -5%;//use percentage to test on bigger resolutions
   font-size: 5em;
 
-  @media (max-height: 700px) {
-    //add specific to the resolution config
-    height: 65px;
-    width: 65px;
-  }
-
-  @media (min-height:700px) and (max-height: 800px) {
-    //add specific to the resolution config
-    height: 75px;
-    width: 75px;
-  }
 }
 
 .navigation .nav-btn-scroller {
-    .nav-btn;
+  .nav-btn;
 }
-
-//info:hover, info:active, input:hover+info, input:active+info {
-//  background: yellow;
-//}
 
 .navigation .scroll-hint .label {
   margin-top: 10%;
@@ -181,7 +177,7 @@
   margin-top: 30px;
 
   color: @colorGray;
-  z-index:2000;
+  z-index: 2000;
 }
 
 .hi .main-title .subtitle-block {
@@ -202,7 +198,6 @@
   display: inline-block;
 }
 
-
 //Animation box
 
 .hi .brush-animation-box {
@@ -210,19 +205,19 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  left:10%;
+  left: 10%;
   //overflow: hidden;
   //background-color: yellow;
-  top:50px;
-  @media(max-height: 700px) { //add specific to the resolution config
-    top:-100px;
+  top: 50px;
+  @media (max-height: 700px) {
+    //add specific to the resolution config
+    top: -100px;
   }
-  @media (min-height: 700px) and (max-height: 800px) { //add specific to the resolution config
-    top:-50px;
+  @media (min-height: 700px) and (max-height: 800px) {
+    //add specific to the resolution config
+    top: -50px;
   }
 }
-
-
 
 //Images
 .hi .glass_perm {
@@ -268,7 +263,7 @@
 }
 
 .hi .names .first-name {
-  font-size:  101px; //6.3em; // 101px;
+  font-size: 101px; //6.3em; // 101px;
   line-height: 1.1em;
   margin-bottom: -30px;
 
@@ -345,10 +340,11 @@
 
 .low .about .about-wrapper {
   position: absolute;
-  top:150px;
+  top: 150px;
   width: 100%;
   height: 100%;
 }
+
 .low .about .about-content {
   position: absolute;
   width: 100%;
@@ -368,7 +364,7 @@
 
 .low .about .text {
   margin-top: 0px;
-  right:0%;
+  right: 0%;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -380,7 +376,7 @@
 .low .about .text .title {
   color: @colorBlue;
   font-size: 2.5em;
-  font-family: @ohyeahfont;
+  font-family: @ohyeahFont;
 }
 
 .low .about .text .text-body {
@@ -388,10 +384,10 @@
   font-size: 2em; //15px;
   margin-top: 1%;
   font-weight: 100;
-  margin-left:7%;
+  margin-left: 7%;
   display: block;
   text-align: left;
-  font-family: @alwaysfont;
+  font-family: @alwaysFont;
   margin-top: 0.5em;
 }
 
@@ -402,7 +398,6 @@
   margin-right: auto;
   width: 551px;
   height: 311px;
-
 
 }
 
@@ -423,7 +418,7 @@
   margin-right: auto;
   margin-top: 50px;
   margin-bottom: 10px;
-  font-family: @ohyeahfont;
+  font-family: @ohyeahFont;
   text-transform: uppercase;
   line-height: 1.1em;
   font-size: 2.5em;
@@ -450,15 +445,14 @@
 }
 
 .low .contacts .column {
-  width:50%;
-  float:left;
+  width: 50%;
+  float: left;
   display: block;
   margin-top: 5%;
 }
 
-
-.low .contacts .title1  {
-  font-family: @ohyeahfont;
+.low .contacts .title1 {
+  font-family: @ohyeahFont;
   color: @colorGray;
   font-size: 3em;//50px;
   line-height: 1.1em;
@@ -466,8 +460,8 @@
 
 }
 
-.low .contacts .title2  {
-  font-family: @ohyeahfont;
+.low .contacts .title2 {
+  font-family: @ohyeahFont;
   color: @colorGray;
   font-size: 3em;//50px;
   line-height: 1.1em;
@@ -475,15 +469,13 @@
 
 }
 
-
 .low .contacts .body-more {
-  font-family: @alwaysfont;
+  font-family: @alwaysFont;
   display: block;
   width: 70%;
   color: dimgray;
   font-size: 2em;
 }
-
 
 .low .contacts a {
   margin-top: 10px;
@@ -492,67 +484,112 @@
   font-family: @kgtFont;
   //display: block;
   font-size: 2em;
-  }
+}
 
 .low .contacts .email {
-  //text-align: center;
-
 }
 
 .contacts .input {
-  display:block;
-  font-family: @alwaysfont;
+  display: block;
+  font-family: @alwaysFont;
   font-size: 1.8em;
   line-height: 1.5em;
   padding: 10px;
   height: 3em;
+  vertical-align: top;
+  border-top: 3px solid @colorGray;
+  border-bottom: 3px solid @colorGray;
+  border-left: none;
+  border-right: none;
+  background: none;
+  width: 100%;
+}
+
+.contacts .input:hover,
+.contacts .input:focus,
+.contacts .input:active {
+  outline: 10px;
+  outline-color: @colorRed;
+  text-decoration: tomato;
+}
+
+
+.contacts .input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: @colorBlue;
+}
+
+.contacts .input:focus::-webkit-input-placeholder, {
+  color: transparent;
+}
+.contacts .input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.contacts .input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+contacts .email-email {
+
+}
+
+.contacts .email-to {
+  //display: block;
+  font-family: @alwaysFont;
+  font-size: 1.8em;
+  line-height: 1.5em;
+  padding: 10px;
+  height: 3em;
+
+  display: table-cell;
+  vertical-align: middle;
+
+  //border-top: 3px solid @colorGray;
   border-bottom: none;
   border-left: none;
   border-right: none;
-  border-width: 3px;
-  background: none;
-  margin-bottom: 0px;
-  width:85%;
-  float: right;
-}
+  //display: block;
+  // width: inherit;
+  color: @colorBlue;
 
-/*.contacts .email-myemail{
-   border-top-color: @colorGray;
- } */
-
-contacts .email-email{
-  border-top-color: @colorGray;
 }
 
 .contacts .email-message {
-  height:200px;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  border-top-color: @colorGray;
-  border-width: 3px;
+  height: 200px;
+  //  border-bottom: none;
+  //  border-left: none;
+  //  border-right: none;
+  // // border-top-color: @colorGray;
+  //  border-width: 3px;
   background: none;
+  padding-top: 30px;
   margin-bottom: 10px;
+
 }
 
-::-webkit-input-placeholder { /* WebKit browsers */
-  color:    @colorBlue;
-}
 
-.contacts .email-myemail {
-  ;
+.contacts .email-myemail {;
 }
-
 
 .contacts .email-submit {
-  color:@colorRed;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 100%;
+  display: block;
+  font-size: 4em;
+  text-decoration: none;
+  text-align: center;
+  color: @colorRed;
 
 }
-
 
 .contacts .email-submit:hover,
 .contacts .email-submit:focus,
 .contacts .email-submit:active,
 {
+  .nav-btn;
   cursor: pointer;
+  margin-top: -2%;//use percentage to test on bigger resolutions
+  font-size: 5em;
 }
