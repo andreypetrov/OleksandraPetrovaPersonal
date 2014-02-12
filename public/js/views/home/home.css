@@ -184,6 +184,7 @@
   /*@media(max-height: 800px) { //add specific to the resolution config
     top: 120px;
   } */
+
 }
 .hi .paintbuck {
   background-image: url("img/paintbuck2.png");
@@ -367,6 +368,7 @@
   font-size: 3em;
   line-height: 1.1em;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 .low .contacts .title2 {
   font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
@@ -374,6 +376,7 @@
   font-size: 3em;
   line-height: 1.1em;
   margin-top: 30px;
+  margin-left: 10px;
 }
 .low .contacts .body-more {
   font-family: alwaysto, "Helvetica Neue", Arial, sans-serif;
@@ -381,6 +384,7 @@
   width: 70%;
   color: dimgray;
   font-size: 2em;
+  margin-left: 10px;
 }
 .low .contacts .icon {
   margin-top: 20px;
@@ -392,6 +396,7 @@
   font-size: 3em;
   position: relative;
   margin-right: 10px;
+  margin-left: 10px;
 }
 .low .contacts a {
   text-decoration: none;
@@ -404,6 +409,7 @@
   text-align: left;
   border: none;
   text-decoration: none;
+  margin-left: 10px;
 }
 .contacts .input {
   display: block;
@@ -429,6 +435,7 @@
 }
 .contacts .input::-webkit-input-placeholder {
   /* WebKit browsers */
+
   color: #4b849a;
 }
 .contacts .input:focus::-webkit-input-placeholder {
