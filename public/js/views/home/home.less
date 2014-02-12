@@ -544,12 +544,7 @@
   color: transparent;
 }
 
-contacts .email-email {
-
-}
-
 .contacts .email-to {
-  //display: block;
   font-family: @alwaysFont;
   font-size: 1.8em;
   line-height: 1.5em;
@@ -559,53 +554,49 @@ contacts .email-email {
   display: table-cell;
   vertical-align: middle;
 
-  //border-top: 3px solid @colorGray;
   border-bottom: none;
   border-left: none;
   border-right: none;
-  //display: block;
-  // width: inherit;
   color: @colorBlue;
-
 }
 
 
-.contacts .stack .email-message {
+.contacts .textarea-wrapper {
+  position: relative;
+  height: 200px;
+}
 
-  //  border-bottom: none;
-  //  border-left: none;
-  //  border-right: none;
-  // // border-top-color: @colorGray;
-  //  border-width: 3px;
+.contacts .textarea-wrapper .email-message {
+
   background: none;
+  border-bottom:none;
   padding-top: 30px;
   margin-bottom: 10px;
   position: absolute;
-  width: 50%;
-  height: 28%;
+  width: 100%;
+  height: 100%;
 
 }
 
-.contacts .stack .email-submit {
+.contacts .textarea-wrapper .email-submit {
   position: absolute;
-  bottom: 37%;
-  width: 50%;
-  //display: block;
+  bottom:0%;
+  right:0%;
+  //  width: 50%;
+  display: block;
   font-size: 4em;
-  text-align: right;
   color: @colorRed;
-  z-index: 1;
-
+  //z-index: 1000;
 }
 
 .contacts .email-submit:hover,
 .contacts .email-submit:focus,
 .contacts .email-submit:active,
 {
-  .nav-btn;
-  width: 50%;
   text-align: right;
   cursor: pointer;
-  margin-top: 1%;//use percentage to test on bigger resolutions
+  right:-1%;
+  bottom:-4%;
+  //margin-top: 5%;//use percentage to test on bigger resolutions
   font-size: 5em;
 }
