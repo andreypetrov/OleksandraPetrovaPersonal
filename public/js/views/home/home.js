@@ -105,7 +105,8 @@ define([
 
             $(this.sliderEl).nivoSlider({
                 effect: 'slideInLeft',//,
-                manualAdvance: true
+                manualAdvance: false,
+                pauseTime: 5000
             });
         },
 
