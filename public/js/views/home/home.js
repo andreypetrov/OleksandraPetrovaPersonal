@@ -31,7 +31,7 @@ define([
         contactsNavEl: 0,
         activeNavEl: 0,
 
-        emailNameEl: 0,
+        //emailNameEl: 0,
         emailEmailEl: 0,
         emailMessageEl: 0,
 
@@ -55,7 +55,7 @@ define([
             this.portfolioNavEl = this.$el.find('.nav-portfolio').find('a');
             this.contactsNavEl = this.$el.find('.nav-contacts').find('a');
 
-            this.emailNameEl = this.$el.find('.email-name');
+            //this.emailNameEl = this.$el.find('.email-name');
             this.emailEmailEl = this.$el.find('.email-email');
             this.emailMessageEl = this.$el.find('.email-message');
 
@@ -196,7 +196,7 @@ define([
 
         getEmailObject: function () {
             var emailObject = {}; //create an empty object to hold the values
-            emailObject.name = this.emailNameEl.val();
+            //emailObject.name = this.emailNameEl.val();
             emailObject.email = this.emailEmailEl.val();
             emailObject.message = this.emailMessageEl.val();
             return emailObject;
@@ -209,7 +209,7 @@ define([
         },
 
         isInputValid: function() {
-             if (this.emailNameEl.val() && this.emailEmailEl.val() && this.emailMessageEl.val() && this.isEmailValid()) {
+             if (this.emailEmailEl.val() && this.emailMessageEl.val() && this.isEmailValid()) {
                  return true;
              } else {
                  return false;

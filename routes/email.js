@@ -15,9 +15,9 @@ var sendgrid  = require('sendgrid')(
 );
 
 var send = function(req, res) {
-   if(req.body.name && req.body.email && req.body.message) {
+   if(req.body.email && req.body.message) {
        sendEmail(req.body);
-       res.send("Thank you, " + req.body.name + ". Your email is on its way to me :)");
+       res.send("Thank you! Your email is on its way to me :)");
    } else {   //input invalid, return error message
        res.send("Please provide all details!");
    }
@@ -27,7 +27,6 @@ var sendEmail = function(body) {
     sendgrid.send({
         to: 'oleksandra.sydorenko@hotmail.com',
         from: body.email,
-        fromname: body.name,
         subject: 'Oleksandra Portfolio Website Email',
         text: body.message
     }, function(err, json) {
