@@ -38,7 +38,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-cargo:before {
+.icon-cargocollective:before {
   content: "a";
 }
 .icon-down:before {
@@ -56,12 +56,15 @@
 .icon-linkedin:before {
   content: "f";
 }
-.icon-mail:before {
+.icon-mail-icon:before {
   content: "g";
 }
-.icon-palette:before {
+.icon-submit:before {
   content: "h";
 }
-.icon-right:before {
+.icon-palette:before {
   content: "i";
+}
+.icon-right:before {
+  content: "j";
 }
