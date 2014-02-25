@@ -184,7 +184,6 @@
   /*@media(max-height: 800px) { //add specific to the resolution config
     top: 120px;
   } */
-
 }
 .hi .paintbuck {
   background-image: url("img/paintbuck2.png");
@@ -362,6 +361,12 @@
   display: block;
   margin-top: 5%;
 }
+.low .contacts .column .first {
+  float: right;
+}
+.low .contacts .column .second {
+  float: left;
+}
 .low .contacts .title1 {
   font-family: ohyeah, "Helvetica Neue", Arial, sans-serif;
   color: #b7b7b8;
@@ -435,7 +440,6 @@
 }
 .contacts .input::-webkit-input-placeholder {
   /* WebKit browsers */
-
   color: #4b849a;
 }
 .contacts .input:focus::-webkit-input-placeholder {
