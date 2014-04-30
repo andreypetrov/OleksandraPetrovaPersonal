@@ -38,33 +38,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-cargocollective:before {
+.icon-about2:before {
   content: "a";
 }
-.icon-down:before {
+.icon-down2:before {
   content: "b";
 }
-.icon-files:before {
+.icon-dribbble2:before {
   content: "c";
 }
-.icon-hi:before {
+.icon-files2:before {
   content: "d";
 }
-.icon-left:before {
+.icon-hi2:before {
   content: "e";
 }
-.icon-linkedin:before {
+.icon-left2:before {
   content: "f";
 }
-.icon-mail-icon:before {
+.icon-linkedin2:before {
   content: "g";
 }
-.icon-submit:before {
+.icon-mail2:before {
   content: "h";
 }
-.icon-palette:before {
+.icon-right2:before {
   content: "i";
 }
-.icon-right:before {
+.icon-up2:before {
   content: "j";
 }
